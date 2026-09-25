@@ -1,12 +1,12 @@
 {
-  "version": "1.0-expanded-oob",
+  "version": "2.0-depth-deployment",
   "scenario": "Dubno 1941",
   "notes": {
     "naming": "地图名称不使用德军/苏军前缀；阵营由 faction 字段区分。",
     "hqRule": "军司令部、军警卫营、师部、师部警卫连、团部、团部警卫连均为 HQ。",
     "commandBodyStats": "军司令部、师部、团部统一 strength=100, attack=2。",
-    "deployment": "q/r 为适配现有50x36地图的游戏化初始部署，不代表精确历史坐标。",
-    "subordinateNaming": "军/师隶属关系依据用户提供编制资料；团以下番号为本游戏战术化编制，用于建立营连级OOB，并非声称为史料中的精确历史番号。"
+    "deployment": "V2纵深部署：德军采用较集中攻击楔形，苏军采用较宽纵深展开；战斗营位于前沿，反坦克/工兵位于二线，炮兵位于后方；团部、师部、军司令部及HQ警卫单位全部退出第一线。",
+    "subordinateNaming": "军/师隶属关系依据用户提供编制资料；团以下番号为本游戏战术化编制，用于建立营连级OOB，并非为史料中的精确历史番号。"
   },
   "units": [
     {
@@ -16,8 +16,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 3,
-      "r": 3,
+      "q": 9,
+      "r": 13,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -31,7 +31,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "command",
-      "parentCorps": "第3摩托化军"
+      "parentCorps": "第3摩托化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "GER_III_GUARD_BN",
@@ -40,8 +41,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "battalion",
-      "q": 4,
-      "r": 3,
+      "q": 7,
+      "r": 16,
       "strength": 650,
       "maxStrength": 650,
       "attack": 6,
@@ -55,7 +56,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "guard",
-      "parentCorps": "第3摩托化军"
+      "parentCorps": "第3摩托化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "GER_13PZ_DIV_HQ",
@@ -64,8 +66,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 5,
-      "r": 3,
+      "q": 6,
+      "r": 11,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -80,7 +82,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第13装甲师"
+      "parentDivision": "第13装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_13PZ_DIV_GUARD1",
@@ -89,8 +92,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 6,
-      "r": 3,
+      "q": 2,
+      "r": 4,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -105,7 +108,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第13装甲师"
+      "parentDivision": "第13装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_13PZ_DIV_GUARD2",
@@ -114,8 +118,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 7,
-      "r": 3,
+      "q": 5,
+      "r": 7,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -130,7 +134,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第13装甲师"
+      "parentDivision": "第13装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_13PZ_AR13_HQ",
@@ -140,7 +145,7 @@
       "type": "headquarters",
       "echelon": "company",
       "q": 8,
-      "r": 3,
+      "r": 2,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -156,7 +161,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第13装甲团"
+      "parentRegiment": "第13装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_13PZ_AR13_GUARD",
@@ -165,8 +171,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 9,
-      "r": 3,
+      "q": 8,
+      "r": 5,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -182,7 +188,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第13装甲团"
+      "parentRegiment": "第13装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_13PZ_AR13_BN1",
@@ -191,8 +198,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 10,
-      "r": 3,
+      "q": 17,
+      "r": 6,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -206,7 +213,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第13装甲团"
+      "parentRegiment": "第13装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_13PZ_AR13_BN2",
@@ -215,8 +223,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 11,
-      "r": 3,
+      "q": 18,
+      "r": 2,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -230,7 +238,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第13装甲团"
+      "parentRegiment": "第13装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_13PZ_MR14_HQ",
@@ -239,8 +248,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 12,
-      "r": 3,
+      "q": 6,
+      "r": 5,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -256,7 +265,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第14摩托化步兵团"
+      "parentRegiment": "第14摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_13PZ_MR14_GUARD",
@@ -265,8 +275,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 13,
-      "r": 3,
+      "q": 10,
+      "r": 9,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -282,7 +292,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第14摩托化步兵团"
+      "parentRegiment": "第14摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_13PZ_MR14_BN1",
@@ -291,8 +302,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 14,
-      "r": 3,
+      "q": 13,
+      "r": 11,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -306,7 +317,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第14摩托化步兵团"
+      "parentRegiment": "第14摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_13PZ_MR14_BN2",
@@ -315,8 +327,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 15,
-      "r": 3,
+      "q": 20,
+      "r": 5,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -330,7 +342,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第14摩托化步兵团"
+      "parentRegiment": "第14摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_13PZ_ART15_HQ",
@@ -339,8 +352,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 16,
-      "r": 3,
+      "q": 8,
+      "r": 7,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -356,7 +369,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第15炮兵团"
+      "parentRegiment": "第15炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_13PZ_ART15_GUARD",
@@ -365,8 +379,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 17,
-      "r": 3,
+      "q": 6,
+      "r": 9,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -382,7 +396,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第15炮兵团"
+      "parentRegiment": "第15炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_13PZ_ART15_BN1",
@@ -391,8 +406,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 18,
-      "r": 3,
+      "q": 9,
+      "r": 2,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -406,7 +421,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第15炮兵团"
+      "parentRegiment": "第15炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_13PZ_ART15_BN2",
@@ -415,7 +431,7 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 19,
+      "q": 11,
       "r": 3,
       "strength": 500,
       "maxStrength": 500,
@@ -430,7 +446,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第13装甲师",
-      "parentRegiment": "第15炮兵团"
+      "parentRegiment": "第15炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_13PZ_REC",
@@ -439,8 +456,8 @@
       "faction": "german",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 3,
-      "r": 4,
+      "q": 18,
+      "r": 5,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -453,7 +470,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第13装甲师"
+      "parentDivision": "第13装甲师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "GER_13PZ_ENG",
@@ -462,8 +480,8 @@
       "faction": "german",
       "type": "engineer",
       "echelon": "company",
-      "q": 4,
-      "r": 4,
+      "q": 14,
+      "r": 9,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -476,7 +494,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第13装甲师"
+      "parentDivision": "第13装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_13PZ_AT",
@@ -485,8 +504,8 @@
       "faction": "german",
       "type": "antitank",
       "echelon": "company",
-      "q": 5,
-      "r": 4,
+      "q": 11,
+      "r": 8,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -499,7 +518,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第13装甲师"
+      "parentDivision": "第13装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_14PZ_DIV_HQ",
@@ -508,8 +528,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 6,
-      "r": 4,
+      "q": 5,
+      "r": 17,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -524,7 +544,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第14装甲师"
+      "parentDivision": "第14装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_14PZ_DIV_GUARD1",
@@ -533,8 +554,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 7,
-      "r": 4,
+      "q": 4,
+      "r": 15,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -549,7 +570,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第14装甲师"
+      "parentDivision": "第14装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_14PZ_DIV_GUARD2",
@@ -559,7 +581,7 @@
       "type": "infantry",
       "echelon": "company",
       "q": 8,
-      "r": 4,
+      "r": 10,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -574,7 +596,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第14装甲师"
+      "parentDivision": "第14装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_14PZ_AR16_HQ",
@@ -584,7 +607,7 @@
       "type": "headquarters",
       "echelon": "company",
       "q": 9,
-      "r": 4,
+      "r": 10,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -600,7 +623,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第16装甲团"
+      "parentRegiment": "第16装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_14PZ_AR16_GUARD",
@@ -609,8 +633,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 10,
-      "r": 4,
+      "q": 11,
+      "r": 7,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -626,7 +650,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第16装甲团"
+      "parentRegiment": "第16装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_14PZ_AR16_BN1",
@@ -635,8 +660,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 11,
-      "r": 4,
+      "q": 20,
+      "r": 6,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -650,7 +675,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第16装甲团"
+      "parentRegiment": "第16装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_14PZ_AR16_BN2",
@@ -659,8 +685,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 12,
-      "r": 4,
+      "q": 19,
+      "r": 8,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -674,7 +700,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第16装甲团"
+      "parentRegiment": "第16装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_14PZ_MR17_HQ",
@@ -683,8 +710,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 13,
-      "r": 4,
+      "q": 6,
+      "r": 13,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -700,7 +727,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第17摩托化步兵团"
+      "parentRegiment": "第17摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_14PZ_MR17_GUARD",
@@ -709,8 +737,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 14,
-      "r": 4,
+      "q": 13,
+      "r": 16,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -726,7 +754,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第17摩托化步兵团"
+      "parentRegiment": "第17摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_14PZ_MR17_BN1",
@@ -735,8 +764,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 15,
-      "r": 4,
+      "q": 13,
+      "r": 17,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -750,7 +779,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第17摩托化步兵团"
+      "parentRegiment": "第17摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_14PZ_MR17_BN2",
@@ -759,8 +789,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 16,
-      "r": 4,
+      "q": 20,
+      "r": 16,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -774,7 +804,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第17摩托化步兵团"
+      "parentRegiment": "第17摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_14PZ_ART18_HQ",
@@ -783,8 +814,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 17,
-      "r": 4,
+      "q": 7,
+      "r": 18,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -800,7 +831,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第18炮兵团"
+      "parentRegiment": "第18炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_14PZ_ART18_GUARD",
@@ -809,8 +841,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 18,
-      "r": 4,
+      "q": 9,
+      "r": 14,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -826,7 +858,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第18炮兵团"
+      "parentRegiment": "第18炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_14PZ_ART18_BN1",
@@ -835,8 +868,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 19,
-      "r": 4,
+      "q": 10,
+      "r": 10,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -850,7 +883,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第18炮兵团"
+      "parentRegiment": "第18炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_14PZ_ART18_BN2",
@@ -859,8 +893,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 3,
-      "r": 5,
+      "q": 11,
+      "r": 9,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -874,7 +908,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第14装甲师",
-      "parentRegiment": "第18炮兵团"
+      "parentRegiment": "第18炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_14PZ_REC",
@@ -883,8 +918,8 @@
       "faction": "german",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 4,
-      "r": 5,
+      "q": 18,
+      "r": 9,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -897,7 +932,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第14装甲师"
+      "parentDivision": "第14装甲师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "GER_14PZ_ENG",
@@ -906,8 +942,8 @@
       "faction": "german",
       "type": "engineer",
       "echelon": "company",
-      "q": 5,
-      "r": 5,
+      "q": 15,
+      "r": 15,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -920,7 +956,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第14装甲师"
+      "parentDivision": "第14装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_14PZ_AT",
@@ -929,8 +966,8 @@
       "faction": "german",
       "type": "antitank",
       "echelon": "company",
-      "q": 6,
-      "r": 5,
+      "q": 10,
+      "r": 13,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -943,7 +980,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第14装甲师"
+      "parentDivision": "第14装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_25MOT_DIV_HQ",
@@ -952,8 +990,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 7,
-      "r": 5,
+      "q": 8,
+      "r": 18,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -968,7 +1006,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第25摩托化步兵师"
+      "parentDivision": "第25摩托化步兵师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_25MOT_DIV_GUARD1",
@@ -978,7 +1017,7 @@
       "type": "infantry",
       "echelon": "company",
       "q": 8,
-      "r": 5,
+      "r": 17,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -993,7 +1032,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第25摩托化步兵师"
+      "parentDivision": "第25摩托化步兵师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_25MOT_DIV_GUARD2",
@@ -1002,8 +1042,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 9,
-      "r": 5,
+      "q": 3,
+      "r": 22,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1018,7 +1058,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第25摩托化步兵师"
+      "parentDivision": "第25摩托化步兵师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_25MOT_MR20_HQ",
@@ -1028,7 +1069,7 @@
       "type": "headquarters",
       "echelon": "company",
       "q": 10,
-      "r": 5,
+      "r": 19,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1044,7 +1085,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第20摩托化步兵团"
+      "parentRegiment": "第20摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_25MOT_MR20_GUARD",
@@ -1053,8 +1095,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 11,
-      "r": 5,
+      "q": 13,
+      "r": 21,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1070,7 +1112,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第20摩托化步兵团"
+      "parentRegiment": "第20摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_25MOT_MR20_BN1",
@@ -1079,8 +1122,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 12,
-      "r": 5,
+      "q": 19,
+      "r": 18,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -1094,7 +1137,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第20摩托化步兵团"
+      "parentRegiment": "第20摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_25MOT_MR20_BN2",
@@ -1103,8 +1147,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 13,
-      "r": 5,
+      "q": 20,
+      "r": 18,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -1118,7 +1162,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第20摩托化步兵团"
+      "parentRegiment": "第20摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_25MOT_MR21_HQ",
@@ -1127,8 +1172,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 14,
-      "r": 5,
+      "q": 10,
+      "r": 17,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1144,7 +1189,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第21摩托化步兵团"
+      "parentRegiment": "第21摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_25MOT_MR21_GUARD",
@@ -1153,8 +1199,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 15,
-      "r": 5,
+      "q": 11,
+      "r": 23,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1170,7 +1216,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第21摩托化步兵团"
+      "parentRegiment": "第21摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_25MOT_MR21_BN1",
@@ -1179,8 +1226,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 16,
-      "r": 5,
+      "q": 17,
+      "r": 21,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -1194,7 +1241,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第21摩托化步兵团"
+      "parentRegiment": "第21摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_25MOT_MR21_BN2",
@@ -1203,8 +1251,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 17,
-      "r": 5,
+      "q": 20,
+      "r": 21,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -1218,7 +1266,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第21摩托化步兵团"
+      "parentRegiment": "第21摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_25MOT_ART22_HQ",
@@ -1227,8 +1276,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 18,
-      "r": 5,
+      "q": 12,
+      "r": 15,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1244,7 +1293,8 @@
       "hqRole": "command",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第22炮兵团"
+      "parentRegiment": "第22炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_25MOT_ART22_GUARD",
@@ -1253,8 +1303,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 19,
-      "r": 5,
+      "q": 12,
+      "r": 16,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1270,7 +1320,8 @@
       "hqRole": "guard",
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第22炮兵团"
+      "parentRegiment": "第22炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_25MOT_ART22_BN1",
@@ -1279,8 +1330,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 3,
-      "r": 6,
+      "q": 11,
+      "r": 17,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -1294,7 +1345,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第22炮兵团"
+      "parentRegiment": "第22炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_25MOT_ART22_BN2",
@@ -1303,8 +1355,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 4,
-      "r": 6,
+      "q": 9,
+      "r": 16,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -1318,7 +1370,8 @@
       "isHQ": false,
       "parentCorps": "第3摩托化军",
       "parentDivision": "第25摩托化步兵师",
-      "parentRegiment": "第22炮兵团"
+      "parentRegiment": "第22炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_25MOT_REC",
@@ -1327,8 +1380,8 @@
       "faction": "german",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 5,
-      "r": 6,
+      "q": 15,
+      "r": 18,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1341,7 +1394,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第25摩托化步兵师"
+      "parentDivision": "第25摩托化步兵师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "GER_25MOT_ENG",
@@ -1350,8 +1404,8 @@
       "faction": "german",
       "type": "engineer",
       "echelon": "company",
-      "q": 6,
-      "r": 6,
+      "q": 15,
+      "r": 21,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -1364,7 +1418,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第25摩托化步兵师"
+      "parentDivision": "第25摩托化步兵师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_25MOT_AT",
@@ -1373,8 +1428,8 @@
       "faction": "german",
       "type": "antitank",
       "echelon": "company",
-      "q": 7,
-      "r": 6,
+      "q": 16,
+      "r": 17,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -1387,7 +1442,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第3摩托化军",
-      "parentDivision": "第25摩托化步兵师"
+      "parentDivision": "第25摩托化步兵师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_XLVIII_HQ",
@@ -1397,7 +1453,7 @@
       "type": "headquarters",
       "echelon": "company",
       "q": 8,
-      "r": 6,
+      "r": 22,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1411,7 +1467,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "command",
-      "parentCorps": "第48摩托化军"
+      "parentCorps": "第48摩托化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "GER_XLVIII_GUARD_BN",
@@ -1420,8 +1477,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "battalion",
-      "q": 9,
-      "r": 6,
+      "q": 8,
+      "r": 29,
       "strength": 650,
       "maxStrength": 650,
       "attack": 6,
@@ -1435,7 +1492,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "guard",
-      "parentCorps": "第48摩托化军"
+      "parentCorps": "第48摩托化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "GER_11PZ_DIV_HQ",
@@ -1444,8 +1502,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 10,
-      "r": 6,
+      "q": 9,
+      "r": 11,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1460,7 +1518,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第11装甲师"
+      "parentDivision": "第11装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_11PZ_DIV_GUARD1",
@@ -1469,8 +1528,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 11,
-      "r": 6,
+      "q": 7,
+      "r": 10,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1485,7 +1544,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第11装甲师"
+      "parentDivision": "第11装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_11PZ_DIV_GUARD2",
@@ -1494,8 +1554,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 12,
-      "r": 6,
+      "q": 11,
+      "r": 12,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1510,7 +1570,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第11装甲师"
+      "parentDivision": "第11装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_11PZ_AR24_HQ",
@@ -1519,8 +1580,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 13,
-      "r": 6,
+      "q": 15,
+      "r": 3,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1536,7 +1597,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第24装甲团"
+      "parentRegiment": "第24装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_11PZ_AR24_GUARD",
@@ -1545,8 +1607,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 14,
-      "r": 6,
+      "q": 19,
+      "r": 2,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1562,7 +1624,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第24装甲团"
+      "parentRegiment": "第24装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_11PZ_AR24_BN1",
@@ -1571,8 +1634,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 15,
-      "r": 6,
+      "q": 19,
+      "r": 9,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -1586,7 +1649,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第24装甲团"
+      "parentRegiment": "第24装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_11PZ_AR24_BN2",
@@ -1595,8 +1659,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 16,
-      "r": 6,
+      "q": 24,
+      "r": 10,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -1610,7 +1674,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第24装甲团"
+      "parentRegiment": "第24装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_11PZ_MR25_HQ",
@@ -1619,8 +1684,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 17,
-      "r": 6,
+      "q": 16,
+      "r": 5,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1636,7 +1701,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第25摩托化步兵团"
+      "parentRegiment": "第25摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_11PZ_MR25_GUARD",
@@ -1645,8 +1711,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 18,
-      "r": 6,
+      "q": 13,
+      "r": 15,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1662,7 +1728,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第25摩托化步兵团"
+      "parentRegiment": "第25摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_11PZ_MR25_BN1",
@@ -1671,8 +1738,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 19,
-      "r": 6,
+      "q": 23,
+      "r": 11,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -1686,7 +1753,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第25摩托化步兵团"
+      "parentRegiment": "第25摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_11PZ_MR25_BN2",
@@ -1695,8 +1763,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 3,
-      "r": 7,
+      "q": 19,
+      "r": 14,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -1710,7 +1778,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第25摩托化步兵团"
+      "parentRegiment": "第25摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_11PZ_ART26_HQ",
@@ -1719,8 +1788,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 4,
-      "r": 7,
+      "q": 15,
+      "r": 8,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1736,7 +1805,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第26炮兵团"
+      "parentRegiment": "第26炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_11PZ_ART26_GUARD",
@@ -1745,8 +1815,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 5,
-      "r": 7,
+      "q": 12,
+      "r": 9,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1762,7 +1832,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第26炮兵团"
+      "parentRegiment": "第26炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_11PZ_ART26_BN1",
@@ -1771,8 +1842,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 6,
-      "r": 7,
+      "q": 11,
+      "r": 10,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -1786,7 +1857,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第26炮兵团"
+      "parentRegiment": "第26炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_11PZ_ART26_BN2",
@@ -1795,8 +1867,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 7,
-      "r": 7,
+      "q": 13,
+      "r": 9,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -1810,7 +1882,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第11装甲师",
-      "parentRegiment": "第26炮兵团"
+      "parentRegiment": "第26炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_11PZ_REC",
@@ -1819,7 +1892,7 @@
       "faction": "german",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 8,
+      "q": 23,
       "r": 7,
       "strength": 180,
       "maxStrength": 180,
@@ -1833,7 +1906,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第11装甲师"
+      "parentDivision": "第11装甲师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "GER_11PZ_ENG",
@@ -1842,8 +1916,8 @@
       "faction": "german",
       "type": "engineer",
       "echelon": "company",
-      "q": 9,
-      "r": 7,
+      "q": 16,
+      "r": 12,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -1856,7 +1930,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第11装甲师"
+      "parentDivision": "第11装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_11PZ_AT",
@@ -1865,8 +1940,8 @@
       "faction": "german",
       "type": "antitank",
       "echelon": "company",
-      "q": 10,
-      "r": 7,
+      "q": 20,
+      "r": 4,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -1879,7 +1954,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第11装甲师"
+      "parentDivision": "第11装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_16PZ_DIV_HQ",
@@ -1888,8 +1964,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 11,
-      "r": 7,
+      "q": 8,
+      "r": 21,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1904,7 +1980,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16装甲师"
+      "parentDivision": "第16装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_16PZ_DIV_GUARD1",
@@ -1913,8 +1990,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 12,
-      "r": 7,
+      "q": 11,
+      "r": 13,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1929,7 +2006,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16装甲师"
+      "parentDivision": "第16装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_16PZ_DIV_GUARD2",
@@ -1938,8 +2016,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 13,
-      "r": 7,
+      "q": 14,
+      "r": 12,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -1954,7 +2032,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16装甲师"
+      "parentDivision": "第16装甲师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_16PZ_AR27_HQ",
@@ -1963,8 +2042,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 14,
-      "r": 7,
+      "q": 18,
+      "r": 15,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -1980,7 +2059,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第27装甲团"
+      "parentRegiment": "第27装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16PZ_AR27_GUARD",
@@ -1989,8 +2069,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 15,
-      "r": 7,
+      "q": 18,
+      "r": 8,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2006,7 +2086,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第27装甲团"
+      "parentRegiment": "第27装甲团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16PZ_AR27_BN1",
@@ -2015,8 +2096,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 16,
-      "r": 7,
+      "q": 19,
+      "r": 12,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -2030,7 +2111,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第27装甲团"
+      "parentRegiment": "第27装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16PZ_AR27_BN2",
@@ -2039,8 +2121,8 @@
       "faction": "german",
       "type": "armor",
       "echelon": "battalion",
-      "q": 17,
-      "r": 7,
+      "q": 22,
+      "r": 19,
       "strength": 650,
       "maxStrength": 650,
       "attack": 10,
@@ -2054,7 +2136,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第27装甲团"
+      "parentRegiment": "第27装甲团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16PZ_MR28_HQ",
@@ -2063,8 +2146,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 18,
-      "r": 7,
+      "q": 11,
+      "r": 15,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2080,7 +2163,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第28摩托化步兵团"
+      "parentRegiment": "第28摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16PZ_MR28_GUARD",
@@ -2089,8 +2173,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 19,
-      "r": 7,
+      "q": 17,
+      "r": 19,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2106,7 +2190,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第28摩托化步兵团"
+      "parentRegiment": "第28摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16PZ_MR28_BN1",
@@ -2115,8 +2200,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 3,
-      "r": 8,
+      "q": 23,
+      "r": 13,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -2130,7 +2215,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第28摩托化步兵团"
+      "parentRegiment": "第28摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16PZ_MR28_BN2",
@@ -2139,8 +2225,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 4,
-      "r": 8,
+      "q": 21,
+      "r": 17,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -2154,7 +2240,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第28摩托化步兵团"
+      "parentRegiment": "第28摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16PZ_ART29_HQ",
@@ -2163,8 +2250,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 5,
-      "r": 8,
+      "q": 19,
+      "r": 17,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2180,7 +2267,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第29炮兵团"
+      "parentRegiment": "第29炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16PZ_ART29_GUARD",
@@ -2189,8 +2277,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 6,
-      "r": 8,
+      "q": 14,
+      "r": 20,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2206,7 +2294,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第29炮兵团"
+      "parentRegiment": "第29炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16PZ_ART29_BN1",
@@ -2215,8 +2304,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 7,
-      "r": 8,
+      "q": 11,
+      "r": 14,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -2230,7 +2319,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第29炮兵团"
+      "parentRegiment": "第29炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_16PZ_ART29_BN2",
@@ -2239,8 +2329,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 8,
-      "r": 8,
+      "q": 11,
+      "r": 20,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -2254,7 +2344,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16装甲师",
-      "parentRegiment": "第29炮兵团"
+      "parentRegiment": "第29炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_16PZ_REC",
@@ -2263,8 +2354,8 @@
       "faction": "german",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 9,
-      "r": 8,
+      "q": 20,
+      "r": 14,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2277,7 +2368,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16装甲师"
+      "parentDivision": "第16装甲师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "GER_16PZ_ENG",
@@ -2286,8 +2378,8 @@
       "faction": "german",
       "type": "engineer",
       "echelon": "company",
-      "q": 10,
-      "r": 8,
+      "q": 16,
+      "r": 20,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -2300,7 +2392,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16装甲师"
+      "parentDivision": "第16装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_16PZ_AT",
@@ -2309,8 +2402,8 @@
       "faction": "german",
       "type": "antitank",
       "echelon": "company",
-      "q": 11,
-      "r": 8,
+      "q": 23,
+      "r": 14,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -2323,7 +2416,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16装甲师"
+      "parentDivision": "第16装甲师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_16MOT_DIV_HQ",
@@ -2333,7 +2427,7 @@
       "type": "headquarters",
       "echelon": "company",
       "q": 12,
-      "r": 8,
+      "r": 23,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2348,7 +2442,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16摩托化步兵师"
+      "parentDivision": "第16摩托化步兵师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_16MOT_DIV_GUARD1",
@@ -2357,8 +2452,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 13,
-      "r": 8,
+      "q": 11,
+      "r": 26,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2373,7 +2468,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16摩托化步兵师"
+      "parentDivision": "第16摩托化步兵师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_16MOT_DIV_GUARD2",
@@ -2382,8 +2478,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 14,
-      "r": 8,
+      "q": 11,
+      "r": 27,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2398,7 +2494,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16摩托化步兵师"
+      "parentDivision": "第16摩托化步兵师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "GER_16MOT_MR31_HQ",
@@ -2407,8 +2504,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 15,
-      "r": 8,
+      "q": 13,
+      "r": 30,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2424,7 +2521,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第31摩托化步兵团"
+      "parentRegiment": "第31摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16MOT_MR31_GUARD",
@@ -2433,8 +2531,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 16,
-      "r": 8,
+      "q": 19,
+      "r": 20,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2450,7 +2548,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第31摩托化步兵团"
+      "parentRegiment": "第31摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16MOT_MR31_BN1",
@@ -2459,8 +2558,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 17,
-      "r": 8,
+      "q": 24,
+      "r": 18,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -2474,7 +2573,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第31摩托化步兵团"
+      "parentRegiment": "第31摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16MOT_MR31_BN2",
@@ -2483,8 +2583,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 18,
-      "r": 8,
+      "q": 27,
+      "r": 19,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -2498,7 +2598,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第31摩托化步兵团"
+      "parentRegiment": "第31摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16MOT_MR32_HQ",
@@ -2507,8 +2608,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 19,
-      "r": 8,
+      "q": 11,
+      "r": 22,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2524,7 +2625,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第32摩托化步兵团"
+      "parentRegiment": "第32摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16MOT_MR32_GUARD",
@@ -2533,8 +2635,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 3,
-      "r": 9,
+      "q": 18,
+      "r": 29,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2550,7 +2652,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第32摩托化步兵团"
+      "parentRegiment": "第32摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16MOT_MR32_BN1",
@@ -2559,8 +2662,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 4,
-      "r": 9,
+      "q": 22,
+      "r": 23,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -2574,7 +2677,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第32摩托化步兵团"
+      "parentRegiment": "第32摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16MOT_MR32_BN2",
@@ -2583,8 +2687,8 @@
       "faction": "german",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 5,
-      "r": 9,
+      "q": 19,
+      "r": 28,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -2598,7 +2702,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第32摩托化步兵团"
+      "parentRegiment": "第32摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "GER_16MOT_ART33_HQ",
@@ -2607,8 +2712,8 @@
       "faction": "german",
       "type": "headquarters",
       "echelon": "company",
-      "q": 6,
-      "r": 9,
+      "q": 18,
+      "r": 20,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2624,7 +2729,8 @@
       "hqRole": "command",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第33炮兵团"
+      "parentRegiment": "第33炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16MOT_ART33_GUARD",
@@ -2633,8 +2739,8 @@
       "faction": "german",
       "type": "infantry",
       "echelon": "company",
-      "q": 7,
-      "r": 9,
+      "q": 19,
+      "r": 19,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2650,7 +2756,8 @@
       "hqRole": "guard",
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第33炮兵团"
+      "parentRegiment": "第33炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "GER_16MOT_ART33_BN1",
@@ -2659,8 +2766,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 8,
-      "r": 9,
+      "q": 14,
+      "r": 21,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -2674,7 +2781,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第33炮兵团"
+      "parentRegiment": "第33炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_16MOT_ART33_BN2",
@@ -2683,8 +2791,8 @@
       "faction": "german",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 9,
-      "r": 9,
+      "q": 11,
+      "r": 24,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -2698,7 +2806,8 @@
       "isHQ": false,
       "parentCorps": "第48摩托化军",
       "parentDivision": "第16摩托化步兵师",
-      "parentRegiment": "第33炮兵团"
+      "parentRegiment": "第33炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "GER_16MOT_REC",
@@ -2707,8 +2816,8 @@
       "faction": "german",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 10,
-      "r": 9,
+      "q": 23,
+      "r": 23,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2721,7 +2830,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16摩托化步兵师"
+      "parentDivision": "第16摩托化步兵师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "GER_16MOT_ENG",
@@ -2730,8 +2840,8 @@
       "faction": "german",
       "type": "engineer",
       "echelon": "company",
-      "q": 11,
-      "r": 9,
+      "q": 20,
+      "r": 26,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -2744,7 +2854,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16摩托化步兵师"
+      "parentDivision": "第16摩托化步兵师",
+      "deploymentRole": "support"
     },
     {
       "id": "GER_16MOT_AT",
@@ -2753,8 +2864,8 @@
       "faction": "german",
       "type": "antitank",
       "echelon": "company",
-      "q": 12,
-      "r": 9,
+      "q": 21,
+      "r": 18,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -2767,7 +2878,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第48摩托化军",
-      "parentDivision": "第16摩托化步兵师"
+      "parentDivision": "第16摩托化步兵师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_9MC_HQ",
@@ -2776,8 +2888,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 29,
-      "r": 3,
+      "q": 42,
+      "r": 7,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2791,7 +2903,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "command",
-      "parentCorps": "第9机械化军"
+      "parentCorps": "第9机械化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "SOV_9MC_GUARD_BN",
@@ -2800,8 +2913,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "battalion",
-      "q": 30,
-      "r": 3,
+      "q": 44,
+      "r": 6,
       "strength": 650,
       "maxStrength": 650,
       "attack": 6,
@@ -2815,7 +2928,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "guard",
-      "parentCorps": "第9机械化军"
+      "parentCorps": "第9机械化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "SOV_20TD_DIV_HQ",
@@ -2824,8 +2938,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 31,
-      "r": 3,
+      "q": 44,
+      "r": 5,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2840,7 +2954,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第20坦克师"
+      "parentDivision": "第20坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_20TD_DIV_GUARD1",
@@ -2849,7 +2964,7 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 32,
+      "q": 45,
       "r": 3,
       "strength": 180,
       "maxStrength": 180,
@@ -2865,7 +2980,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第20坦克师"
+      "parentDivision": "第20坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_20TD_DIV_GUARD2",
@@ -2874,8 +2990,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 33,
-      "r": 3,
+      "q": 42,
+      "r": 4,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2890,7 +3006,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第20坦克师"
+      "parentDivision": "第20坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_20TD_AR40_HQ",
@@ -2899,8 +3016,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 34,
-      "r": 3,
+      "q": 37,
+      "r": 4,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -2916,7 +3033,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第40坦克团"
+      "parentRegiment": "第40坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_20TD_AR40_GUARD",
@@ -2925,8 +3043,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 35,
-      "r": 3,
+      "q": 37,
+      "r": 5,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -2942,7 +3060,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第40坦克团"
+      "parentRegiment": "第40坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_20TD_AR40_BN1",
@@ -2951,8 +3070,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 36,
-      "r": 3,
+      "q": 34,
+      "r": 2,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -2966,7 +3085,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第40坦克团"
+      "parentRegiment": "第40坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_20TD_AR40_BN2",
@@ -2975,7 +3095,7 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 37,
+      "q": 30,
       "r": 3,
       "strength": 600,
       "maxStrength": 600,
@@ -2990,7 +3110,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第40坦克团"
+      "parentRegiment": "第40坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_20TD_AR40_BN3",
@@ -2999,8 +3120,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 38,
-      "r": 3,
+      "q": 29,
+      "r": 9,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -3014,7 +3135,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第40坦克团"
+      "parentRegiment": "第40坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_20TD_MR41_HQ",
@@ -3023,7 +3145,7 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 39,
+      "q": 40,
       "r": 3,
       "strength": 100,
       "maxStrength": 100,
@@ -3040,7 +3162,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第41摩托化步兵团"
+      "parentRegiment": "第41摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_20TD_MR41_GUARD",
@@ -3049,8 +3172,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 40,
-      "r": 3,
+      "q": 38,
+      "r": 11,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3066,7 +3189,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第41摩托化步兵团"
+      "parentRegiment": "第41摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_20TD_MR41_BN1",
@@ -3075,7 +3199,7 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 41,
+      "q": 35,
       "r": 3,
       "strength": 800,
       "maxStrength": 800,
@@ -3090,7 +3214,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第41摩托化步兵团"
+      "parentRegiment": "第41摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_20TD_MR41_BN2",
@@ -3099,8 +3224,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 42,
-      "r": 3,
+      "q": 31,
+      "r": 12,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -3114,7 +3239,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第41摩托化步兵团"
+      "parentRegiment": "第41摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_20TD_ART42_HQ",
@@ -3123,8 +3249,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 43,
-      "r": 3,
+      "q": 39,
+      "r": 5,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3140,7 +3266,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第42炮兵团"
+      "parentRegiment": "第42炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_20TD_ART42_GUARD",
@@ -3149,8 +3276,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 44,
-      "r": 3,
+      "q": 37,
+      "r": 7,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3166,7 +3293,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第42炮兵团"
+      "parentRegiment": "第42炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_20TD_ART42_BN1",
@@ -3175,7 +3303,7 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 45,
+      "q": 43,
       "r": 3,
       "strength": 500,
       "maxStrength": 500,
@@ -3190,7 +3318,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第42炮兵团"
+      "parentRegiment": "第42炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_20TD_ART42_BN2",
@@ -3199,8 +3328,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 46,
-      "r": 3,
+      "q": 38,
+      "r": 5,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -3214,7 +3343,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第20坦克师",
-      "parentRegiment": "第42炮兵团"
+      "parentRegiment": "第42炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_20TD_REC",
@@ -3223,8 +3353,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 29,
-      "r": 4,
+      "q": 32,
+      "r": 3,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3237,7 +3367,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第20坦克师"
+      "parentDivision": "第20坦克师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_20TD_ENG",
@@ -3246,8 +3377,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 30,
-      "r": 4,
+      "q": 40,
+      "r": 6,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -3260,7 +3391,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第20坦克师"
+      "parentDivision": "第20坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_20TD_AT",
@@ -3269,8 +3401,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 31,
-      "r": 4,
+      "q": 33,
+      "r": 6,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -3283,7 +3415,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第20坦克师"
+      "parentDivision": "第20坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_35TD_DIV_HQ",
@@ -3292,8 +3425,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 32,
-      "r": 4,
+      "q": 40,
+      "r": 17,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3308,7 +3441,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第35坦克师"
+      "parentDivision": "第35坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_35TD_DIV_GUARD1",
@@ -3317,8 +3451,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 33,
-      "r": 4,
+      "q": 47,
+      "r": 10,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3333,7 +3467,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第35坦克师"
+      "parentDivision": "第35坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_35TD_DIV_GUARD2",
@@ -3342,8 +3477,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 34,
-      "r": 4,
+      "q": 44,
+      "r": 14,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3358,7 +3493,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第35坦克师"
+      "parentDivision": "第35坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_35TD_AR44_HQ",
@@ -3367,8 +3503,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 35,
-      "r": 4,
+      "q": 44,
+      "r": 8,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3384,7 +3520,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第44坦克团"
+      "parentRegiment": "第44坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_35TD_AR44_GUARD",
@@ -3393,8 +3530,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 36,
-      "r": 4,
+      "q": 43,
+      "r": 5,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3410,7 +3547,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第44坦克团"
+      "parentRegiment": "第44坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_35TD_AR44_BN1",
@@ -3419,8 +3557,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 37,
-      "r": 4,
+      "q": 32,
+      "r": 11,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -3434,7 +3572,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第44坦克团"
+      "parentRegiment": "第44坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_35TD_AR44_BN2",
@@ -3443,8 +3582,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 38,
-      "r": 4,
+      "q": 30,
+      "r": 13,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -3458,7 +3597,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第44坦克团"
+      "parentRegiment": "第44坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_35TD_AR44_BN3",
@@ -3467,8 +3607,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 39,
-      "r": 4,
+      "q": 30,
+      "r": 14,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -3482,7 +3622,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第44坦克团"
+      "parentRegiment": "第44坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_35TD_MR45_HQ",
@@ -3491,8 +3632,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 40,
-      "r": 4,
+      "q": 43,
+      "r": 6,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3508,7 +3649,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第45摩托化步兵团"
+      "parentRegiment": "第45摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_35TD_MR45_GUARD",
@@ -3517,8 +3659,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 41,
-      "r": 4,
+      "q": 39,
+      "r": 17,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3534,7 +3676,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第45摩托化步兵团"
+      "parentRegiment": "第45摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_35TD_MR45_BN1",
@@ -3543,8 +3686,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 42,
-      "r": 4,
+      "q": 32,
+      "r": 9,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -3558,7 +3701,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第45摩托化步兵团"
+      "parentRegiment": "第45摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_35TD_MR45_BN2",
@@ -3567,8 +3711,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 43,
-      "r": 4,
+      "q": 31,
+      "r": 17,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -3582,7 +3726,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第45摩托化步兵团"
+      "parentRegiment": "第45摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_35TD_ART46_HQ",
@@ -3591,8 +3736,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 44,
-      "r": 4,
+      "q": 43,
+      "r": 9,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3608,7 +3753,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第46炮兵团"
+      "parentRegiment": "第46炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_35TD_ART46_GUARD",
@@ -3617,8 +3763,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 45,
-      "r": 4,
+      "q": 39,
+      "r": 11,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3634,7 +3780,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第46炮兵团"
+      "parentRegiment": "第46炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_35TD_ART46_BN1",
@@ -3643,8 +3790,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 46,
-      "r": 4,
+      "q": 38,
+      "r": 13,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -3658,7 +3805,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第46炮兵团"
+      "parentRegiment": "第46炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_35TD_ART46_BN2",
@@ -3667,8 +3815,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 29,
-      "r": 5,
+      "q": 37,
+      "r": 13,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -3682,7 +3830,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第35坦克师",
-      "parentRegiment": "第46炮兵团"
+      "parentRegiment": "第46炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_35TD_REC",
@@ -3691,8 +3840,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 30,
-      "r": 5,
+      "q": 34,
+      "r": 7,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3705,7 +3854,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第35坦克师"
+      "parentDivision": "第35坦克师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_35TD_ENG",
@@ -3714,8 +3864,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 31,
-      "r": 5,
+      "q": 32,
+      "r": 13,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -3728,7 +3878,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第35坦克师"
+      "parentDivision": "第35坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_35TD_AT",
@@ -3737,8 +3888,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 32,
-      "r": 5,
+      "q": 39,
+      "r": 8,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -3751,7 +3902,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第35坦克师"
+      "parentDivision": "第35坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_131MD_DIV_HQ",
@@ -3760,8 +3912,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 33,
-      "r": 5,
+      "q": 44,
+      "r": 16,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3776,7 +3928,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第131摩托化师"
+      "parentDivision": "第131摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_131MD_DIV_GUARD1",
@@ -3785,8 +3938,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 34,
-      "r": 5,
+      "q": 45,
+      "r": 15,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3801,7 +3954,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第131摩托化师"
+      "parentDivision": "第131摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_131MD_DIV_GUARD2",
@@ -3810,8 +3964,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 35,
-      "r": 5,
+      "q": 41,
+      "r": 18,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3826,7 +3980,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
-      "parentDivision": "第131摩托化师"
+      "parentDivision": "第131摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_131MD_MR48_HQ",
@@ -3835,8 +3990,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 36,
-      "r": 5,
+      "q": 38,
+      "r": 17,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3852,7 +4007,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第48摩托化步兵团"
+      "parentRegiment": "第48摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_131MD_MR48_GUARD",
@@ -3861,8 +4017,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 37,
-      "r": 5,
+      "q": 35,
+      "r": 21,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3878,7 +4034,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第48摩托化步兵团"
+      "parentRegiment": "第48摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_131MD_MR48_BN1",
@@ -3887,8 +4044,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 38,
-      "r": 5,
+      "q": 31,
+      "r": 13,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -3902,7 +4059,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第48摩托化步兵团"
+      "parentRegiment": "第48摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_131MD_MR48_BN2",
@@ -3911,8 +4069,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 39,
-      "r": 5,
+      "q": 34,
+      "r": 16,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -3926,7 +4084,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第48摩托化步兵团"
+      "parentRegiment": "第48摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_131MD_MR49_HQ",
@@ -3935,8 +4094,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 40,
-      "r": 5,
+      "q": 44,
+      "r": 10,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -3952,7 +4111,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第49摩托化步兵团"
+      "parentRegiment": "第49摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_131MD_MR49_GUARD",
@@ -3961,8 +4121,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 41,
-      "r": 5,
+      "q": 39,
+      "r": 19,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -3978,7 +4138,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第49摩托化步兵团"
+      "parentRegiment": "第49摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_131MD_MR49_BN1",
@@ -3987,8 +4148,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 42,
-      "r": 5,
+      "q": 35,
+      "r": 18,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -4002,7 +4163,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第49摩托化步兵团"
+      "parentRegiment": "第49摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_131MD_MR49_BN2",
@@ -4011,8 +4173,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 43,
-      "r": 5,
+      "q": 34,
+      "r": 15,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -4026,7 +4188,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第49摩托化步兵团"
+      "parentRegiment": "第49摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_131MD_ART50_HQ",
@@ -4035,8 +4198,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 44,
-      "r": 5,
+      "q": 42,
+      "r": 13,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4052,7 +4215,8 @@
       "hqRole": "command",
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第50炮兵团"
+      "parentRegiment": "第50炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_131MD_ART50_GUARD",
@@ -4061,8 +4225,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 45,
-      "r": 5,
+      "q": 39,
+      "r": 13,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4078,7 +4242,8 @@
       "hqRole": "guard",
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第50炮兵团"
+      "parentRegiment": "第50炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_131MD_ART50_BN1",
@@ -4087,8 +4252,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 46,
-      "r": 5,
+      "q": 39,
+      "r": 18,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -4102,7 +4267,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第50炮兵团"
+      "parentRegiment": "第50炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_131MD_ART50_BN2",
@@ -4111,8 +4277,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 29,
-      "r": 6,
+      "q": 37,
+      "r": 19,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -4126,7 +4292,8 @@
       "isHQ": false,
       "parentCorps": "第9机械化军",
       "parentDivision": "第131摩托化师",
-      "parentRegiment": "第50炮兵团"
+      "parentRegiment": "第50炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_131MD_REC",
@@ -4135,8 +4302,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 30,
-      "r": 6,
+      "q": 29,
+      "r": 15,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4149,7 +4316,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第131摩托化师"
+      "parentDivision": "第131摩托化师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_131MD_ENG",
@@ -4158,8 +4326,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 31,
-      "r": 6,
+      "q": 34,
+      "r": 18,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -4172,7 +4340,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第131摩托化师"
+      "parentDivision": "第131摩托化师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_131MD_AT",
@@ -4181,8 +4350,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 32,
-      "r": 6,
+      "q": 36,
+      "r": 17,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -4195,7 +4364,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第9机械化军",
-      "parentDivision": "第131摩托化师"
+      "parentDivision": "第131摩托化师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_19MC_HQ",
@@ -4204,8 +4374,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 33,
-      "r": 6,
+      "q": 47,
+      "r": 14,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4219,7 +4389,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "command",
-      "parentCorps": "第19机械化军"
+      "parentCorps": "第19机械化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "SOV_19MC_GUARD_BN",
@@ -4228,8 +4399,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "battalion",
-      "q": 34,
-      "r": 6,
+      "q": 43,
+      "r": 20,
       "strength": 650,
       "maxStrength": 650,
       "attack": 6,
@@ -4243,7 +4414,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "guard",
-      "parentCorps": "第19机械化军"
+      "parentCorps": "第19机械化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "SOV_40TD_DIV_HQ",
@@ -4252,8 +4424,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 35,
-      "r": 6,
+      "q": 47,
+      "r": 8,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4268,7 +4440,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第40坦克师"
+      "parentDivision": "第40坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_40TD_DIV_GUARD1",
@@ -4277,8 +4450,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 36,
-      "r": 6,
+      "q": 47,
+      "r": 2,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4293,7 +4466,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第40坦克师"
+      "parentDivision": "第40坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_40TD_DIV_GUARD2",
@@ -4302,7 +4476,7 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 37,
+      "q": 47,
       "r": 6,
       "strength": 180,
       "maxStrength": 180,
@@ -4318,7 +4492,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第40坦克师"
+      "parentDivision": "第40坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_40TD_AR52_HQ",
@@ -4327,8 +4502,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 38,
-      "r": 6,
+      "q": 46,
+      "r": 3,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4344,7 +4519,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第52坦克团"
+      "parentRegiment": "第52坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_40TD_AR52_GUARD",
@@ -4353,8 +4529,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 39,
-      "r": 6,
+      "q": 43,
+      "r": 7,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4370,7 +4546,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第52坦克团"
+      "parentRegiment": "第52坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_40TD_AR52_BN1",
@@ -4379,8 +4556,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 40,
-      "r": 6,
+      "q": 36,
+      "r": 2,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -4394,7 +4571,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第52坦克团"
+      "parentRegiment": "第52坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_40TD_AR52_BN2",
@@ -4403,8 +4581,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 41,
-      "r": 6,
+      "q": 42,
+      "r": 5,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -4418,7 +4596,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第52坦克团"
+      "parentRegiment": "第52坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_40TD_AR52_BN3",
@@ -4427,7 +4606,7 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 42,
+      "q": 35,
       "r": 6,
       "strength": 600,
       "maxStrength": 600,
@@ -4442,7 +4621,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第52坦克团"
+      "parentRegiment": "第52坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_40TD_MR53_HQ",
@@ -4451,8 +4631,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 43,
-      "r": 6,
+      "q": 42,
+      "r": 3,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4468,7 +4648,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第53摩托化步兵团"
+      "parentRegiment": "第53摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_40TD_MR53_GUARD",
@@ -4477,8 +4658,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 44,
-      "r": 6,
+      "q": 46,
+      "r": 9,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4494,7 +4675,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第53摩托化步兵团"
+      "parentRegiment": "第53摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_40TD_MR53_BN1",
@@ -4503,8 +4685,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 45,
-      "r": 6,
+      "q": 42,
+      "r": 8,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -4518,7 +4700,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第53摩托化步兵团"
+      "parentRegiment": "第53摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_40TD_MR53_BN2",
@@ -4527,8 +4710,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 46,
-      "r": 6,
+      "q": 40,
+      "r": 12,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -4542,7 +4725,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第53摩托化步兵团"
+      "parentRegiment": "第53摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_40TD_ART54_HQ",
@@ -4551,8 +4735,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 29,
-      "r": 7,
+      "q": 45,
+      "r": 9,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4568,7 +4752,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第54炮兵团"
+      "parentRegiment": "第54炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_40TD_ART54_GUARD",
@@ -4577,7 +4762,7 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 30,
+      "q": 47,
       "r": 7,
       "strength": 180,
       "maxStrength": 180,
@@ -4594,7 +4779,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第54炮兵团"
+      "parentRegiment": "第54炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_40TD_ART54_BN1",
@@ -4603,7 +4789,7 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 31,
+      "q": 45,
       "r": 7,
       "strength": 500,
       "maxStrength": 500,
@@ -4618,7 +4804,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第54炮兵团"
+      "parentRegiment": "第54炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_40TD_ART54_BN2",
@@ -4627,8 +4814,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 32,
-      "r": 7,
+      "q": 46,
+      "r": 6,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -4642,7 +4829,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第40坦克师",
-      "parentRegiment": "第54炮兵团"
+      "parentRegiment": "第54炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_40TD_REC",
@@ -4651,8 +4839,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 33,
-      "r": 7,
+      "q": 40,
+      "r": 2,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4665,7 +4853,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第40坦克师"
+      "parentDivision": "第40坦克师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_40TD_ENG",
@@ -4674,8 +4863,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 34,
-      "r": 7,
+      "q": 41,
+      "r": 8,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -4688,7 +4877,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第40坦克师"
+      "parentDivision": "第40坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_40TD_AT",
@@ -4697,8 +4887,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 35,
-      "r": 7,
+      "q": 41,
+      "r": 9,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -4711,7 +4901,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第40坦克师"
+      "parentDivision": "第40坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_43TD_DIV_HQ",
@@ -4720,8 +4911,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 36,
-      "r": 7,
+      "q": 47,
+      "r": 17,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4736,7 +4927,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第43坦克师"
+      "parentDivision": "第43坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_43TD_DIV_GUARD1",
@@ -4745,8 +4937,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 37,
-      "r": 7,
+      "q": 46,
+      "r": 17,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4761,7 +4953,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第43坦克师"
+      "parentDivision": "第43坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_43TD_DIV_GUARD2",
@@ -4770,8 +4963,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 38,
-      "r": 7,
+      "q": 47,
+      "r": 19,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4786,7 +4979,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第43坦克师"
+      "parentDivision": "第43坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_43TD_AR56_HQ",
@@ -4795,8 +4989,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 39,
-      "r": 7,
+      "q": 45,
+      "r": 14,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4812,7 +5006,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第56坦克团"
+      "parentRegiment": "第56坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_43TD_AR56_GUARD",
@@ -4821,8 +5016,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 40,
-      "r": 7,
+      "q": 43,
+      "r": 12,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4838,7 +5033,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第56坦克团"
+      "parentRegiment": "第56坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_43TD_AR56_BN1",
@@ -4847,8 +5043,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 41,
-      "r": 7,
+      "q": 39,
+      "r": 12,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -4862,7 +5058,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第56坦克团"
+      "parentRegiment": "第56坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_43TD_AR56_BN2",
@@ -4871,8 +5068,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 42,
-      "r": 7,
+      "q": 41,
+      "r": 12,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -4886,7 +5083,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第56坦克团"
+      "parentRegiment": "第56坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_43TD_AR56_BN3",
@@ -4895,8 +5093,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 43,
-      "r": 7,
+      "q": 36,
+      "r": 14,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -4910,7 +5108,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第56坦克团"
+      "parentRegiment": "第56坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_43TD_MR57_HQ",
@@ -4919,8 +5118,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 44,
-      "r": 7,
+      "q": 43,
+      "r": 15,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -4936,7 +5135,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第57摩托化步兵团"
+      "parentRegiment": "第57摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_43TD_MR57_GUARD",
@@ -4945,8 +5145,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 45,
-      "r": 7,
+      "q": 42,
+      "r": 23,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -4962,7 +5162,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第57摩托化步兵团"
+      "parentRegiment": "第57摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_43TD_MR57_BN1",
@@ -4971,8 +5172,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 46,
-      "r": 7,
+      "q": 42,
+      "r": 17,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -4986,7 +5187,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第57摩托化步兵团"
+      "parentRegiment": "第57摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_43TD_MR57_BN2",
@@ -4995,8 +5197,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 29,
-      "r": 8,
+      "q": 41,
+      "r": 15,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5010,7 +5212,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第57摩托化步兵团"
+      "parentRegiment": "第57摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_43TD_ART58_HQ",
@@ -5019,8 +5222,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 30,
-      "r": 8,
+      "q": 47,
+      "r": 20,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5036,7 +5239,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第58炮兵团"
+      "parentRegiment": "第58炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_43TD_ART58_GUARD",
@@ -5045,8 +5249,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 31,
-      "r": 8,
+      "q": 45,
+      "r": 16,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5062,7 +5266,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第58炮兵团"
+      "parentRegiment": "第58炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_43TD_ART58_BN1",
@@ -5071,8 +5276,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 32,
-      "r": 8,
+      "q": 44,
+      "r": 13,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -5086,7 +5291,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第58炮兵团"
+      "parentRegiment": "第58炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_43TD_ART58_BN2",
@@ -5095,8 +5301,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 33,
-      "r": 8,
+      "q": 44,
+      "r": 19,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -5110,7 +5316,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第43坦克师",
-      "parentRegiment": "第58炮兵团"
+      "parentRegiment": "第58炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_43TD_REC",
@@ -5119,8 +5326,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 34,
-      "r": 8,
+      "q": 39,
+      "r": 10,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5133,7 +5340,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第43坦克师"
+      "parentDivision": "第43坦克师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_43TD_ENG",
@@ -5142,8 +5350,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 35,
-      "r": 8,
+      "q": 38,
+      "r": 18,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -5156,7 +5364,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第43坦克师"
+      "parentDivision": "第43坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_43TD_AT",
@@ -5165,8 +5374,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 36,
-      "r": 8,
+      "q": 39,
+      "r": 14,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -5179,7 +5388,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第43坦克师"
+      "parentDivision": "第43坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_213MD_DIV_HQ",
@@ -5188,8 +5398,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 37,
-      "r": 8,
+      "q": 47,
+      "r": 29,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5204,7 +5414,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第213摩托化师"
+      "parentDivision": "第213摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_213MD_DIV_GUARD1",
@@ -5213,8 +5424,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 38,
-      "r": 8,
+      "q": 47,
+      "r": 18,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5229,7 +5440,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第213摩托化师"
+      "parentDivision": "第213摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_213MD_DIV_GUARD2",
@@ -5238,8 +5450,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 39,
-      "r": 8,
+      "q": 47,
+      "r": 27,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5254,7 +5466,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
-      "parentDivision": "第213摩托化师"
+      "parentDivision": "第213摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_213MD_MR60_HQ",
@@ -5263,8 +5476,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 40,
-      "r": 8,
+      "q": 47,
+      "r": 23,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5280,7 +5493,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第60摩托化步兵团"
+      "parentRegiment": "第60摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_213MD_MR60_GUARD",
@@ -5289,8 +5503,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 41,
-      "r": 8,
+      "q": 43,
+      "r": 24,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5306,7 +5520,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第60摩托化步兵团"
+      "parentRegiment": "第60摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_213MD_MR60_BN1",
@@ -5315,8 +5530,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 42,
-      "r": 8,
+      "q": 38,
+      "r": 16,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5330,7 +5545,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第60摩托化步兵团"
+      "parentRegiment": "第60摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_213MD_MR60_BN2",
@@ -5339,8 +5555,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 43,
-      "r": 8,
+      "q": 38,
+      "r": 24,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5354,7 +5570,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第60摩托化步兵团"
+      "parentRegiment": "第60摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_213MD_MR61_HQ",
@@ -5363,8 +5580,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 44,
-      "r": 8,
+      "q": 46,
+      "r": 19,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5380,7 +5597,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第61摩托化步兵团"
+      "parentRegiment": "第61摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_213MD_MR61_GUARD",
@@ -5389,8 +5607,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 45,
-      "r": 8,
+      "q": 44,
+      "r": 31,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5406,7 +5624,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第61摩托化步兵团"
+      "parentRegiment": "第61摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_213MD_MR61_BN1",
@@ -5415,8 +5634,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 46,
-      "r": 8,
+      "q": 36,
+      "r": 24,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5430,7 +5649,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第61摩托化步兵团"
+      "parentRegiment": "第61摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_213MD_MR61_BN2",
@@ -5439,8 +5659,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 29,
-      "r": 9,
+      "q": 35,
+      "r": 28,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5454,7 +5674,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第61摩托化步兵团"
+      "parentRegiment": "第61摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_213MD_ART62_HQ",
@@ -5463,8 +5684,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 30,
-      "r": 9,
+      "q": 45,
+      "r": 24,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5480,7 +5701,8 @@
       "hqRole": "command",
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第62炮兵团"
+      "parentRegiment": "第62炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_213MD_ART62_GUARD",
@@ -5489,8 +5711,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 31,
-      "r": 9,
+      "q": 43,
+      "r": 23,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5506,7 +5728,8 @@
       "hqRole": "guard",
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第62炮兵团"
+      "parentRegiment": "第62炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_213MD_ART62_BN1",
@@ -5515,8 +5738,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 32,
-      "r": 9,
+      "q": 45,
+      "r": 22,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -5530,7 +5753,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第62炮兵团"
+      "parentRegiment": "第62炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_213MD_ART62_BN2",
@@ -5539,8 +5763,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 33,
-      "r": 9,
+      "q": 46,
+      "r": 25,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -5554,7 +5778,8 @@
       "isHQ": false,
       "parentCorps": "第19机械化军",
       "parentDivision": "第213摩托化师",
-      "parentRegiment": "第62炮兵团"
+      "parentRegiment": "第62炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_213MD_REC",
@@ -5563,8 +5788,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 34,
-      "r": 9,
+      "q": 38,
+      "r": 23,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5577,7 +5802,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第213摩托化师"
+      "parentDivision": "第213摩托化师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_213MD_ENG",
@@ -5586,8 +5812,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 35,
-      "r": 9,
+      "q": 41,
+      "r": 25,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -5600,7 +5826,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第213摩托化师"
+      "parentDivision": "第213摩托化师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_213MD_AT",
@@ -5609,8 +5836,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 36,
-      "r": 9,
+      "q": 40,
+      "r": 23,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -5623,7 +5850,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第19机械化军",
-      "parentDivision": "第213摩托化师"
+      "parentDivision": "第213摩托化师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_8MC_HQ",
@@ -5632,8 +5860,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 37,
-      "r": 9,
+      "q": 47,
+      "r": 31,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5647,7 +5875,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "command",
-      "parentCorps": "第8机械化军"
+      "parentCorps": "第8机械化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "SOV_8MC_GUARD_BN",
@@ -5656,8 +5885,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "battalion",
-      "q": 38,
-      "r": 9,
+      "q": 46,
+      "r": 33,
       "strength": 650,
       "maxStrength": 650,
       "attack": 6,
@@ -5671,7 +5900,8 @@
       "isHQ": true,
       "hqLevel": "corps",
       "hqRole": "guard",
-      "parentCorps": "第8机械化军"
+      "parentCorps": "第8机械化军",
+      "deploymentRole": "rear_command"
     },
     {
       "id": "SOV_12TD_DIV_HQ",
@@ -5680,8 +5910,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 39,
-      "r": 9,
+      "q": 35,
+      "r": 25,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5696,7 +5926,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第12坦克师"
+      "parentDivision": "第12坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_12TD_DIV_GUARD1",
@@ -5706,7 +5937,7 @@
       "type": "infantry",
       "echelon": "company",
       "q": 40,
-      "r": 9,
+      "r": 18,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5721,7 +5952,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第12坦克师"
+      "parentDivision": "第12坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_12TD_DIV_GUARD2",
@@ -5730,8 +5962,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 41,
-      "r": 9,
+      "q": 43,
+      "r": 17,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5746,7 +5978,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第12坦克师"
+      "parentDivision": "第12坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_12TD_AR64_HQ",
@@ -5755,8 +5988,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 42,
-      "r": 9,
+      "q": 32,
+      "r": 23,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5772,7 +6005,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第64坦克团"
+      "parentRegiment": "第64坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_12TD_AR64_GUARD",
@@ -5781,8 +6015,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 43,
-      "r": 9,
+      "q": 32,
+      "r": 21,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5798,7 +6032,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第64坦克团"
+      "parentRegiment": "第64坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_12TD_AR64_BN1",
@@ -5807,8 +6042,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 44,
-      "r": 9,
+      "q": 26,
+      "r": 20,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -5822,7 +6057,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第64坦克团"
+      "parentRegiment": "第64坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_12TD_AR64_BN2",
@@ -5831,8 +6067,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 45,
-      "r": 9,
+      "q": 31,
+      "r": 18,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -5846,7 +6082,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第64坦克团"
+      "parentRegiment": "第64坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_12TD_AR64_BN3",
@@ -5855,8 +6092,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 46,
-      "r": 9,
+      "q": 29,
+      "r": 23,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -5870,7 +6107,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第64坦克团"
+      "parentRegiment": "第64坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_12TD_MR65_HQ",
@@ -5879,8 +6117,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 29,
-      "r": 10,
+      "q": 37,
+      "r": 15,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5896,7 +6134,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第65摩托化步兵团"
+      "parentRegiment": "第65摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_12TD_MR65_GUARD",
@@ -5905,8 +6144,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 30,
-      "r": 10,
+      "q": 34,
+      "r": 27,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -5922,7 +6161,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第65摩托化步兵团"
+      "parentRegiment": "第65摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_12TD_MR65_BN1",
@@ -5931,8 +6171,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 31,
-      "r": 10,
+      "q": 25,
+      "r": 23,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5946,7 +6186,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第65摩托化步兵团"
+      "parentRegiment": "第65摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_12TD_MR65_BN2",
@@ -5955,8 +6196,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 32,
-      "r": 10,
+      "q": 30,
+      "r": 26,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -5970,7 +6211,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第65摩托化步兵团"
+      "parentRegiment": "第65摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_12TD_ART66_HQ",
@@ -5979,8 +6221,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 33,
-      "r": 10,
+      "q": 38,
+      "r": 19,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -5996,7 +6238,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第66炮兵团"
+      "parentRegiment": "第66炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_12TD_ART66_GUARD",
@@ -6006,7 +6249,7 @@
       "type": "infantry",
       "echelon": "company",
       "q": 34,
-      "r": 10,
+      "r": 25,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6022,7 +6265,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第66炮兵团"
+      "parentRegiment": "第66炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_12TD_ART66_BN1",
@@ -6031,8 +6275,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 35,
-      "r": 10,
+      "q": 37,
+      "r": 16,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -6046,7 +6290,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第66炮兵团"
+      "parentRegiment": "第66炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_12TD_ART66_BN2",
@@ -6055,8 +6300,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 36,
-      "r": 10,
+      "q": 35,
+      "r": 19,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -6070,7 +6315,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第12坦克师",
-      "parentRegiment": "第66炮兵团"
+      "parentRegiment": "第66炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_12TD_REC",
@@ -6079,8 +6325,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 37,
-      "r": 10,
+      "q": 30,
+      "r": 19,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6093,7 +6339,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第12坦克师"
+      "parentDivision": "第12坦克师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_12TD_ENG",
@@ -6102,8 +6349,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 38,
-      "r": 10,
+      "q": 30,
+      "r": 23,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -6116,7 +6363,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第12坦克师"
+      "parentDivision": "第12坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_12TD_AT",
@@ -6125,8 +6373,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 39,
-      "r": 10,
+      "q": 31,
+      "r": 16,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -6139,7 +6387,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第12坦克师"
+      "parentDivision": "第12坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_34TD_DIV_HQ",
@@ -6148,8 +6397,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 40,
-      "r": 10,
+      "q": 43,
+      "r": 30,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6164,7 +6413,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第34坦克师"
+      "parentDivision": "第34坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_34TD_DIV_GUARD1",
@@ -6173,8 +6423,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 41,
-      "r": 10,
+      "q": 44,
+      "r": 27,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6189,7 +6439,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第34坦克师"
+      "parentDivision": "第34坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_34TD_DIV_GUARD2",
@@ -6199,7 +6450,7 @@
       "type": "infantry",
       "echelon": "company",
       "q": 42,
-      "r": 10,
+      "r": 31,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6214,7 +6465,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第34坦克师"
+      "parentDivision": "第34坦克师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_34TD_AR68_HQ",
@@ -6223,8 +6475,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 43,
-      "r": 10,
+      "q": 37,
+      "r": 24,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6240,7 +6492,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第68坦克团"
+      "parentRegiment": "第68坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_34TD_AR68_GUARD",
@@ -6249,8 +6502,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 44,
-      "r": 10,
+      "q": 38,
+      "r": 21,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6266,7 +6519,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第68坦克团"
+      "parentRegiment": "第68坦克团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_34TD_AR68_BN1",
@@ -6275,8 +6529,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 45,
-      "r": 10,
+      "q": 35,
+      "r": 23,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -6290,7 +6544,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第68坦克团"
+      "parentRegiment": "第68坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_34TD_AR68_BN2",
@@ -6299,8 +6554,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 46,
-      "r": 10,
+      "q": 34,
+      "r": 21,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -6314,7 +6569,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第68坦克团"
+      "parentRegiment": "第68坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_34TD_AR68_BN3",
@@ -6323,8 +6579,8 @@
       "faction": "soviet",
       "type": "armor",
       "echelon": "battalion",
-      "q": 29,
-      "r": 11,
+      "q": 32,
+      "r": 27,
       "strength": 600,
       "maxStrength": 600,
       "attack": 9,
@@ -6338,7 +6594,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第68坦克团"
+      "parentRegiment": "第68坦克团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_34TD_MR69_HQ",
@@ -6347,8 +6604,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 30,
-      "r": 11,
+      "q": 42,
+      "r": 19,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6364,7 +6621,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第69摩托化步兵团"
+      "parentRegiment": "第69摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_34TD_MR69_GUARD",
@@ -6373,8 +6631,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 31,
-      "r": 11,
+      "q": 42,
+      "r": 27,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6390,7 +6648,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第69摩托化步兵团"
+      "parentRegiment": "第69摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_34TD_MR69_BN1",
@@ -6399,8 +6658,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 32,
-      "r": 11,
+      "q": 36,
+      "r": 27,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -6414,7 +6673,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第69摩托化步兵团"
+      "parentRegiment": "第69摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_34TD_MR69_BN2",
@@ -6424,7 +6684,7 @@
       "type": "motorized",
       "echelon": "battalion",
       "q": 33,
-      "r": 11,
+      "r": 31,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -6438,7 +6698,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第69摩托化步兵团"
+      "parentRegiment": "第69摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_34TD_ART70_HQ",
@@ -6447,8 +6708,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 34,
-      "r": 11,
+      "q": 39,
+      "r": 26,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6464,7 +6725,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第70炮兵团"
+      "parentRegiment": "第70炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_34TD_ART70_GUARD",
@@ -6473,8 +6735,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 35,
-      "r": 11,
+      "q": 39,
+      "r": 28,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6490,7 +6752,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第70炮兵团"
+      "parentRegiment": "第70炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_34TD_ART70_BN1",
@@ -6499,8 +6762,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 36,
-      "r": 11,
+      "q": 40,
+      "r": 24,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -6514,7 +6777,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第70炮兵团"
+      "parentRegiment": "第70炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_34TD_ART70_BN2",
@@ -6523,8 +6787,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 37,
-      "r": 11,
+      "q": 42,
+      "r": 28,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -6538,7 +6802,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第34坦克师",
-      "parentRegiment": "第70炮兵团"
+      "parentRegiment": "第70炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_34TD_REC",
@@ -6547,8 +6812,8 @@
       "faction": "soviet",
       "type": "reconnaissance",
       "echelon": "company",
-      "q": 38,
-      "r": 11,
+      "q": 33,
+      "r": 22,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6561,7 +6826,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第34坦克师"
+      "parentDivision": "第34坦克师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_34TD_ENG",
@@ -6570,8 +6836,8 @@
       "faction": "soviet",
       "type": "engineer",
       "echelon": "company",
-      "q": 39,
-      "r": 11,
+      "q": 34,
+      "r": 29,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -6584,7 +6850,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第34坦克师"
+      "parentDivision": "第34坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_34TD_AT",
@@ -6593,8 +6860,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 40,
-      "r": 11,
+      "q": 36,
+      "r": 26,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -6607,7 +6874,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第34坦克师"
+      "parentDivision": "第34坦克师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_7MD_DIV_HQ",
@@ -6616,8 +6884,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 41,
-      "r": 11,
+      "q": 47,
+      "r": 32,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6632,7 +6900,8 @@
       "hqLevel": "division",
       "hqRole": "command",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第7摩托化师"
+      "parentDivision": "第7摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_7MD_DIV_GUARD1",
@@ -6641,8 +6910,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 42,
-      "r": 11,
+      "q": 46,
+      "r": 30,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6657,7 +6926,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第7摩托化师"
+      "parentDivision": "第7摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_7MD_DIV_GUARD2",
@@ -6666,8 +6936,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 43,
-      "r": 11,
+      "q": 46,
+      "r": 29,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6682,7 +6952,8 @@
       "hqLevel": "division",
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
-      "parentDivision": "第7摩托化师"
+      "parentDivision": "第7摩托化师",
+      "deploymentRole": "division_command"
     },
     {
       "id": "SOV_7MD_MR72_HQ",
@@ -6691,8 +6962,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 44,
-      "r": 11,
+      "q": 46,
+      "r": 32,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6708,7 +6979,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第72摩托化步兵团"
+      "parentRegiment": "第72摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_7MD_MR72_GUARD",
@@ -6717,8 +6989,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 45,
-      "r": 11,
+      "q": 46,
+      "r": 31,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6734,7 +7006,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第72摩托化步兵团"
+      "parentRegiment": "第72摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_7MD_MR72_BN1",
@@ -6743,8 +7016,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 46,
-      "r": 11,
+      "q": 39,
+      "r": 29,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -6758,7 +7031,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第72摩托化步兵团"
+      "parentRegiment": "第72摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_7MD_MR72_BN2",
@@ -6767,8 +7041,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 29,
-      "r": 12,
+      "q": 36,
+      "r": 25,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -6782,7 +7056,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第72摩托化步兵团"
+      "parentRegiment": "第72摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_7MD_MR73_HQ",
@@ -6791,8 +7066,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 30,
-      "r": 12,
+      "q": 46,
+      "r": 24,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6808,7 +7083,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第73摩托化步兵团"
+      "parentRegiment": "第73摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_7MD_MR73_GUARD",
@@ -6817,8 +7093,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 31,
-      "r": 12,
+      "q": 44,
+      "r": 32,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6834,7 +7110,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第73摩托化步兵团"
+      "parentRegiment": "第73摩托化步兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_7MD_MR73_BN1",
@@ -6843,8 +7120,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 32,
-      "r": 12,
+      "q": 38,
+      "r": 28,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -6858,7 +7135,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第73摩托化步兵团"
+      "parentRegiment": "第73摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_7MD_MR73_BN2",
@@ -6867,8 +7145,8 @@
       "faction": "soviet",
       "type": "motorized",
       "echelon": "battalion",
-      "q": 33,
-      "r": 12,
+      "q": 40,
+      "r": 33,
       "strength": 800,
       "maxStrength": 800,
       "attack": 7,
@@ -6882,7 +7160,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第73摩托化步兵团"
+      "parentRegiment": "第73摩托化步兵团",
+      "deploymentRole": "combat"
     },
     {
       "id": "SOV_7MD_ART74_HQ",
@@ -6891,8 +7170,8 @@
       "faction": "soviet",
       "type": "headquarters",
       "echelon": "company",
-      "q": 34,
-      "r": 12,
+      "q": 46,
+      "r": 28,
       "strength": 100,
       "maxStrength": 100,
       "attack": 2,
@@ -6908,7 +7187,8 @@
       "hqRole": "command",
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第74炮兵团"
+      "parentRegiment": "第74炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_7MD_ART74_GUARD",
@@ -6917,8 +7197,8 @@
       "faction": "soviet",
       "type": "infantry",
       "echelon": "company",
-      "q": 35,
-      "r": 12,
+      "q": 41,
+      "r": 28,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -6934,7 +7214,8 @@
       "hqRole": "guard",
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第74炮兵团"
+      "parentRegiment": "第74炮兵团",
+      "deploymentRole": "regimental_command"
     },
     {
       "id": "SOV_7MD_ART74_BN1",
@@ -6943,8 +7224,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 36,
-      "r": 12,
+      "q": 44,
+      "r": 28,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -6958,7 +7239,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第74炮兵团"
+      "parentRegiment": "第74炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_7MD_ART74_BN2",
@@ -6967,8 +7249,8 @@
       "faction": "soviet",
       "type": "artillery",
       "echelon": "battalion",
-      "q": 37,
-      "r": 12,
+      "q": 44,
+      "r": 30,
       "strength": 500,
       "maxStrength": 500,
       "attack": 8,
@@ -6982,7 +7264,8 @@
       "isHQ": false,
       "parentCorps": "第8机械化军",
       "parentDivision": "第7摩托化师",
-      "parentRegiment": "第74炮兵团"
+      "parentRegiment": "第74炮兵团",
+      "deploymentRole": "fire_support"
     },
     {
       "id": "SOV_7MD_REC",
@@ -6992,7 +7275,7 @@
       "type": "reconnaissance",
       "echelon": "company",
       "q": 38,
-      "r": 12,
+      "r": 30,
       "strength": 180,
       "maxStrength": 180,
       "attack": 5,
@@ -7005,7 +7288,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第7摩托化师"
+      "parentDivision": "第7摩托化师",
+      "deploymentRole": "recon_screen"
     },
     {
       "id": "SOV_7MD_ENG",
@@ -7015,7 +7299,7 @@
       "type": "engineer",
       "echelon": "company",
       "q": 39,
-      "r": 12,
+      "r": 33,
       "strength": 180,
       "maxStrength": 180,
       "attack": 6,
@@ -7028,7 +7312,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第7摩托化师"
+      "parentDivision": "第7摩托化师",
+      "deploymentRole": "support"
     },
     {
       "id": "SOV_7MD_AT",
@@ -7037,8 +7322,8 @@
       "faction": "soviet",
       "type": "antitank",
       "echelon": "company",
-      "q": 40,
-      "r": 12,
+      "q": 46,
+      "r": 27,
       "strength": 150,
       "maxStrength": 150,
       "attack": 9,
@@ -7051,7 +7336,8 @@
       "ammo": 100,
       "isHQ": false,
       "parentCorps": "第8机械化军",
-      "parentDivision": "第7摩托化师"
+      "parentDivision": "第7摩托化师",
+      "deploymentRole": "support"
     }
   ]
 }
