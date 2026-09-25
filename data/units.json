@@ -490,9 +490,9 @@
 
       "id": "GER_13PZ_MR14_HQ",
 
-      "name": "第14摩托化步兵团团部",
+      "name": "第14摩步团团部",
 
-      "fullName": "第13装甲师第14摩托化步兵团团部",
+      "fullName": "第13装甲师第14摩步团团部",
 
       "faction": "german",
 
@@ -534,7 +534,7 @@
 
       "parentDivision": "第13装甲师",
 
-      "parentRegiment": "第14摩托化步兵团",
+      "parentRegiment": "第14摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -544,9 +544,9 @@
 
       "id": "GER_13PZ_MR14_GUARD",
 
-      "name": "第14摩托化步兵团团部警卫连",
+      "name": "第14摩步团团部警卫连",
 
-      "fullName": "第13装甲师第14摩托化步兵团团部警卫连",
+      "fullName": "第13装甲师第14摩步团团部警卫连",
 
       "faction": "german",
 
@@ -588,7 +588,7 @@
 
       "parentDivision": "第13装甲师",
 
-      "parentRegiment": "第14摩托化步兵团",
+      "parentRegiment": "第14摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -598,9 +598,9 @@
 
       "id": "GER_13PZ_MR14_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第13装甲师第14摩托化步兵团第1摩托化步兵营",
+      "fullName": "第13装甲师第14摩步团第1摩步营",
 
       "faction": "german",
 
@@ -638,7 +638,7 @@
 
       "parentDivision": "第13装甲师",
 
-      "parentRegiment": "第14摩托化步兵团",
+      "parentRegiment": "第14摩步团",
 
       "deploymentRole": "combat"
 
@@ -648,9 +648,9 @@
 
       "id": "GER_13PZ_MR14_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第13装甲师第14摩托化步兵团第2摩托化步兵营",
+      "fullName": "第13装甲师第14摩步团第2摩步营",
 
       "faction": "german",
 
@@ -688,7 +688,7 @@
 
       "parentDivision": "第13装甲师",
 
-      "parentRegiment": "第14摩托化步兵团",
+      "parentRegiment": "第14摩步团",
 
       "deploymentRole": "combat"
 
@@ -1414,9 +1414,9 @@
 
       "id": "GER_14PZ_MR17_HQ",
 
-      "name": "第17摩托化步兵团团部",
+      "name": "第17摩步团团部",
 
-      "fullName": "第14装甲师第17摩托化步兵团团部",
+      "fullName": "第14装甲师第17摩步团团部",
 
       "faction": "german",
 
@@ -1458,7 +1458,7 @@
 
       "parentDivision": "第14装甲师",
 
-      "parentRegiment": "第17摩托化步兵团",
+      "parentRegiment": "第17摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -1468,9 +1468,9 @@
 
       "id": "GER_14PZ_MR17_GUARD",
 
-      "name": "第17摩托化步兵团团部警卫连",
+      "name": "第17摩步团团部警卫连",
 
-      "fullName": "第14装甲师第17摩托化步兵团团部警卫连",
+      "fullName": "第14装甲师第17摩步团团部警卫连",
 
       "faction": "german",
 
@@ -1512,7 +1512,7 @@
 
       "parentDivision": "第14装甲师",
 
-      "parentRegiment": "第17摩托化步兵团",
+      "parentRegiment": "第17摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -1522,9 +1522,9 @@
 
       "id": "GER_14PZ_MR17_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第14装甲师第17摩托化步兵团第1摩托化步兵营",
+      "fullName": "第14装甲师第17摩步团第1摩步营",
 
       "faction": "german",
 
@@ -1562,7 +1562,7 @@
 
       "parentDivision": "第14装甲师",
 
-      "parentRegiment": "第17摩托化步兵团",
+      "parentRegiment": "第17摩步团",
 
       "deploymentRole": "combat"
 
@@ -1572,9 +1572,9 @@
 
       "id": "GER_14PZ_MR17_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第14装甲师第17摩托化步兵团第2摩托化步兵营",
+      "fullName": "第14装甲师第17摩步团第2摩步营",
 
       "faction": "german",
 
@@ -1612,7 +1612,7 @@
 
       "parentDivision": "第14装甲师",
 
-      "parentRegiment": "第17摩托化步兵团",
+      "parentRegiment": "第17摩步团",
 
       "deploymentRole": "combat"
 
@@ -1974,9 +1974,9 @@
 
       "id": "GER_25MOT_DIV_HQ",
 
-      "name": "第25摩托化步兵师师部",
+      "name": "第25摩步师师部",
 
-      "fullName": "第25摩托化步兵师师部",
+      "fullName": "第25摩步师师部",
 
       "faction": "german",
 
@@ -2016,7 +2016,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "deploymentRole": "division_command"
 
@@ -2026,9 +2026,9 @@
 
       "id": "GER_25MOT_DIV_GUARD1",
 
-      "name": "第25摩托化步兵师师部第2警卫连",
+      "name": "第25摩步师师部第2警卫连",
 
-      "fullName": "第25摩托化步兵师师部第2警卫连",
+      "fullName": "第25摩步师师部第2警卫连",
 
       "faction": "german",
 
@@ -2068,7 +2068,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "deploymentRole": "division_command"
 
@@ -2078,9 +2078,9 @@
 
       "id": "GER_25MOT_DIV_GUARD2",
 
-      "name": "第25摩托化步兵师师部第2警卫连",
+      "name": "第25摩步师师部第2警卫连",
 
-      "fullName": "第25摩托化步兵师师部第2警卫连",
+      "fullName": "第25摩步师师部第2警卫连",
 
       "faction": "german",
 
@@ -2120,7 +2120,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "deploymentRole": "division_command"
 
@@ -2130,9 +2130,9 @@
 
       "id": "GER_25MOT_MR20_HQ",
 
-      "name": "第20摩托化步兵团团部",
+      "name": "第20摩步团团部",
 
-      "fullName": "第25摩托化步兵师第20摩托化步兵团团部",
+      "fullName": "第25摩步师第20摩步团团部",
 
       "faction": "german",
 
@@ -2172,9 +2172,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第20摩托化步兵团",
+      "parentRegiment": "第20摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -2184,9 +2184,9 @@
 
       "id": "GER_25MOT_MR20_GUARD",
 
-      "name": "第20摩托化步兵团团部警卫连",
+      "name": "第20摩步团团部警卫连",
 
-      "fullName": "第25摩托化步兵师第20摩托化步兵团团部警卫连",
+      "fullName": "第25摩步师第20摩步团团部警卫连",
 
       "faction": "german",
 
@@ -2226,9 +2226,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第20摩托化步兵团",
+      "parentRegiment": "第20摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -2238,9 +2238,9 @@
 
       "id": "GER_25MOT_MR20_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第25摩托化步兵师第20摩托化步兵团第1摩托化步兵营",
+      "fullName": "第25摩步师第20摩步团第1摩步营",
 
       "faction": "german",
 
@@ -2276,9 +2276,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第20摩托化步兵团",
+      "parentRegiment": "第20摩步团",
 
       "deploymentRole": "combat"
 
@@ -2288,9 +2288,9 @@
 
       "id": "GER_25MOT_MR20_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第25摩托化步兵师第20摩托化步兵团第2摩托化步兵营",
+      "fullName": "第25摩步师第20摩步团第2摩步营",
 
       "faction": "german",
 
@@ -2326,9 +2326,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第20摩托化步兵团",
+      "parentRegiment": "第20摩步团",
 
       "deploymentRole": "combat"
 
@@ -2338,9 +2338,9 @@
 
       "id": "GER_25MOT_MR21_HQ",
 
-      "name": "第21摩托化步兵团团部",
+      "name": "第21摩步团团部",
 
-      "fullName": "第25摩托化步兵师第21摩托化步兵团团部",
+      "fullName": "第25摩步师第21摩步团团部",
 
       "faction": "german",
 
@@ -2380,9 +2380,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第21摩托化步兵团",
+      "parentRegiment": "第21摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -2392,9 +2392,9 @@
 
       "id": "GER_25MOT_MR21_GUARD",
 
-      "name": "第21摩托化步兵团团部警卫连",
+      "name": "第21摩步团团部警卫连",
 
-      "fullName": "第25摩托化步兵师第21摩托化步兵团团部警卫连",
+      "fullName": "第25摩步师第21摩步团团部警卫连",
 
       "faction": "german",
 
@@ -2434,9 +2434,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第21摩托化步兵团",
+      "parentRegiment": "第21摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -2446,9 +2446,9 @@
 
       "id": "GER_25MOT_MR21_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第25摩托化步兵师第21摩托化步兵团第1摩托化步兵营",
+      "fullName": "第25摩步师第21摩步团第1摩步营",
 
       "faction": "german",
 
@@ -2484,9 +2484,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第21摩托化步兵团",
+      "parentRegiment": "第21摩步团",
 
       "deploymentRole": "combat"
 
@@ -2496,9 +2496,9 @@
 
       "id": "GER_25MOT_MR21_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第25摩托化步兵师第21摩托化步兵团第2摩托化步兵营",
+      "fullName": "第25摩步师第21摩步团第2摩步营",
 
       "faction": "german",
 
@@ -2534,9 +2534,9 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
-      "parentRegiment": "第21摩托化步兵团",
+      "parentRegiment": "第21摩步团",
 
       "deploymentRole": "combat"
 
@@ -2548,7 +2548,7 @@
 
       "name": "第22炮兵团团部",
 
-      "fullName": "第25摩托化步兵师第22炮兵团团部",
+      "fullName": "第25摩步师第22炮兵团团部",
 
       "faction": "german",
 
@@ -2588,7 +2588,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "parentRegiment": "第22炮兵团",
 
@@ -2602,7 +2602,7 @@
 
       "name": "第22炮兵团团部警卫连",
 
-      "fullName": "第25摩托化步兵师第22炮兵团团部警卫连",
+      "fullName": "第25摩步师第22炮兵团团部警卫连",
 
       "faction": "german",
 
@@ -2642,7 +2642,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "parentRegiment": "第22炮兵团",
 
@@ -2656,7 +2656,7 @@
 
       "name": "第22炮兵团第1炮兵营",
 
-      "fullName": "第25摩托化步兵师第22炮兵团第1炮兵营",
+      "fullName": "第25摩步师第22炮兵团第1炮兵营",
 
       "faction": "german",
 
@@ -2692,7 +2692,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "parentRegiment": "第22炮兵团",
 
@@ -2706,7 +2706,7 @@
 
       "name": "第22炮兵团第2炮兵营",
 
-      "fullName": "第25摩托化步兵师第22炮兵团第2炮兵营",
+      "fullName": "第25摩步师第22炮兵团第2炮兵营",
 
       "faction": "german",
 
@@ -2742,7 +2742,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "parentRegiment": "第22炮兵团",
 
@@ -2754,9 +2754,9 @@
 
       "id": "GER_25MOT_REC",
 
-      "name": "第25摩托化步兵师侦察连",
+      "name": "第25摩步师侦察连",
 
-      "fullName": "第25摩托化步兵师侦察连",
+      "fullName": "第25摩步师侦察连",
 
       "faction": "german",
 
@@ -2792,7 +2792,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "deploymentRole": "recon_screen"
 
@@ -2802,9 +2802,9 @@
 
       "id": "GER_25MOT_ENG",
 
-      "name": "第25摩托化步兵师工兵连",
+      "name": "第25摩步师工兵连",
 
-      "fullName": "第25摩托化步兵师工兵连",
+      "fullName": "第25摩步师工兵连",
 
       "faction": "german",
 
@@ -2840,7 +2840,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "deploymentRole": "support"
 
@@ -2850,9 +2850,9 @@
 
       "id": "GER_25MOT_AT",
 
-      "name": "第25摩托化步兵师反坦克连",
+      "name": "第25摩步师反坦克连",
 
-      "fullName": "第25摩托化步兵师反坦克连",
+      "fullName": "第25摩步师反坦克连",
 
       "faction": "german",
 
@@ -2888,7 +2888,7 @@
 
       "parentCorps": "第3摩托化军",
 
-      "parentDivision": "第25摩托化步兵师",
+      "parentDivision": "第25摩步师",
 
       "deploymentRole": "support"
 
@@ -3362,9 +3362,9 @@
 
       "id": "GER_11PZ_MR25_HQ",
 
-      "name": "第25摩托化步兵团团部",
+      "name": "第25摩步团团部",
 
-      "fullName": "第11装甲师第25摩托化步兵团团部",
+      "fullName": "第11装甲师第25摩步团团部",
 
       "faction": "german",
 
@@ -3406,7 +3406,7 @@
 
       "parentDivision": "第11装甲师",
 
-      "parentRegiment": "第25摩托化步兵团",
+      "parentRegiment": "第25摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -3416,9 +3416,9 @@
 
       "id": "GER_11PZ_MR25_GUARD",
 
-      "name": "第25摩托化步兵团团部警卫连",
+      "name": "第25摩步团团部警卫连",
 
-      "fullName": "第11装甲师第25摩托化步兵团团部警卫连",
+      "fullName": "第11装甲师第25摩步团团部警卫连",
 
       "faction": "german",
 
@@ -3460,7 +3460,7 @@
 
       "parentDivision": "第11装甲师",
 
-      "parentRegiment": "第25摩托化步兵团",
+      "parentRegiment": "第25摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -3470,9 +3470,9 @@
 
       "id": "GER_11PZ_MR25_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第11装甲师第25摩托化步兵团第1摩托化步兵营",
+      "fullName": "第11装甲师第25摩步团第1摩步营",
 
       "faction": "german",
 
@@ -3510,7 +3510,7 @@
 
       "parentDivision": "第11装甲师",
 
-      "parentRegiment": "第25摩托化步兵团",
+      "parentRegiment": "第25摩步团",
 
       "deploymentRole": "combat"
 
@@ -3520,9 +3520,9 @@
 
       "id": "GER_11PZ_MR25_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第11装甲师第25摩托化步兵团第2摩托化步兵营",
+      "fullName": "第11装甲师第25摩步团第2摩步营",
 
       "faction": "german",
 
@@ -3560,7 +3560,7 @@
 
       "parentDivision": "第11装甲师",
 
-      "parentRegiment": "第25摩托化步兵团",
+      "parentRegiment": "第25摩步团",
 
       "deploymentRole": "combat"
 
@@ -4286,9 +4286,9 @@
 
       "id": "GER_16PZ_MR28_HQ",
 
-      "name": "第28摩托化步兵团团部",
+      "name": "第28摩步团团部",
 
-      "fullName": "第16装甲师第28摩托化步兵团团部",
+      "fullName": "第16装甲师第28摩步团团部",
 
       "faction": "german",
 
@@ -4330,7 +4330,7 @@
 
       "parentDivision": "第16装甲师",
 
-      "parentRegiment": "第28摩托化步兵团",
+      "parentRegiment": "第28摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -4340,9 +4340,9 @@
 
       "id": "GER_16PZ_MR28_GUARD",
 
-      "name": "第28摩托化步兵团团部警卫连",
+      "name": "第28摩步团团部警卫连",
 
-      "fullName": "第16装甲师第28摩托化步兵团团部警卫连",
+      "fullName": "第16装甲师第28摩步团团部警卫连",
 
       "faction": "german",
 
@@ -4384,7 +4384,7 @@
 
       "parentDivision": "第16装甲师",
 
-      "parentRegiment": "第28摩托化步兵团",
+      "parentRegiment": "第28摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -4394,9 +4394,9 @@
 
       "id": "GER_16PZ_MR28_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第16装甲师第28摩托化步兵团第1摩托化步兵营",
+      "fullName": "第16装甲师第28摩步团第1摩步营",
 
       "faction": "german",
 
@@ -4434,7 +4434,7 @@
 
       "parentDivision": "第16装甲师",
 
-      "parentRegiment": "第28摩托化步兵团",
+      "parentRegiment": "第28摩步团",
 
       "deploymentRole": "combat"
 
@@ -4444,9 +4444,9 @@
 
       "id": "GER_16PZ_MR28_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第16装甲师第28摩托化步兵团第2摩托化步兵营",
+      "fullName": "第16装甲师第28摩步团第2摩步营",
 
       "faction": "german",
 
@@ -4484,7 +4484,7 @@
 
       "parentDivision": "第16装甲师",
 
-      "parentRegiment": "第28摩托化步兵团",
+      "parentRegiment": "第28摩步团",
 
       "deploymentRole": "combat"
 
@@ -4846,9 +4846,9 @@
 
       "id": "GER_16MOT_DIV_HQ",
 
-      "name": "第16摩托化步兵师师部",
+      "name": "第16摩步师师部",
 
-      "fullName": "第16摩托化步兵师师部",
+      "fullName": "第16摩步师师部",
 
       "faction": "german",
 
@@ -4888,7 +4888,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "deploymentRole": "division_command"
 
@@ -4898,9 +4898,9 @@
 
       "id": "GER_16MOT_DIV_GUARD1",
 
-      "name": "第16摩托化步兵师师部第1警卫连",
+      "name": "第16摩步师师部第1警卫连",
 
-      "fullName": "第16摩托化步兵师师部第1警卫连",
+      "fullName": "第16摩步师师部第1警卫连",
 
       "faction": "german",
 
@@ -4940,7 +4940,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "deploymentRole": "division_command"
 
@@ -4950,9 +4950,9 @@
 
       "id": "GER_16MOT_DIV_GUARD2",
 
-      "name": "第16摩托化步兵师师部第2警卫连",
+      "name": "第16摩步师师部第2警卫连",
 
-      "fullName": "第16摩托化步兵师师部第2警卫连",
+      "fullName": "第16摩步师师部第2警卫连",
 
       "faction": "german",
 
@@ -4992,7 +4992,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "deploymentRole": "division_command"
 
@@ -5002,9 +5002,9 @@
 
       "id": "GER_16MOT_MR31_HQ",
 
-      "name": "第31摩托化步兵团团部",
+      "name": "第31摩步团团部",
 
-      "fullName": "第16摩托化步兵师第31摩托化步兵团团部",
+      "fullName": "第16摩步师第31摩步团团部",
 
       "faction": "german",
 
@@ -5044,9 +5044,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第31摩托化步兵团",
+      "parentRegiment": "第31摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -5056,9 +5056,9 @@
 
       "id": "GER_16MOT_MR31_GUARD",
 
-      "name": "第31摩托化步兵团团部警卫连",
+      "name": "第31摩步团团部警卫连",
 
-      "fullName": "第16摩托化步兵师第31摩托化步兵团团部警卫连",
+      "fullName": "第16摩步师第31摩步团团部警卫连",
 
       "faction": "german",
 
@@ -5098,9 +5098,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第31摩托化步兵团",
+      "parentRegiment": "第31摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -5110,9 +5110,9 @@
 
       "id": "GER_16MOT_MR31_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第16摩托化步兵师第31摩托化步兵团第1摩托化步兵营",
+      "fullName": "第16摩步师第31摩步团第1摩步营",
 
       "faction": "german",
 
@@ -5148,9 +5148,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第31摩托化步兵团",
+      "parentRegiment": "第31摩步团",
 
       "deploymentRole": "combat"
 
@@ -5160,9 +5160,9 @@
 
       "id": "GER_16MOT_MR31_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第16摩托化步兵师第31摩托化步兵团第2摩托化步兵营",
+      "fullName": "第16摩步师第31摩步团第2摩步营",
 
       "faction": "german",
 
@@ -5198,9 +5198,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第31摩托化步兵团",
+      "parentRegiment": "第31摩步团",
 
       "deploymentRole": "combat"
 
@@ -5210,9 +5210,9 @@
 
       "id": "GER_16MOT_MR32_HQ",
 
-      "name": "第32摩托化步兵团团部",
+      "name": "第32摩步团团部",
 
-      "fullName": "第16摩托化步兵师第32摩托化步兵团团部",
+      "fullName": "第16摩步师第32摩步团团部",
 
       "faction": "german",
 
@@ -5252,9 +5252,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第32摩托化步兵团",
+      "parentRegiment": "第32摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -5264,9 +5264,9 @@
 
       "id": "GER_16MOT_MR32_GUARD",
 
-      "name": "第32摩托化步兵团团部警卫连",
+      "name": "第32摩步团团部警卫连",
 
-      "fullName": "第16摩托化步兵师第32摩托化步兵团团部警卫连",
+      "fullName": "第16摩步师第32摩步团团部警卫连",
 
       "faction": "german",
 
@@ -5306,9 +5306,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第32摩托化步兵团",
+      "parentRegiment": "第32摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -5318,9 +5318,9 @@
 
       "id": "GER_16MOT_MR32_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第16摩托化步兵师第32摩托化步兵团第1摩托化步兵营",
+      "fullName": "第16摩步师第32摩步团第1摩步营",
 
       "faction": "german",
 
@@ -5356,9 +5356,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第32摩托化步兵团",
+      "parentRegiment": "第32摩步团",
 
       "deploymentRole": "combat"
 
@@ -5368,9 +5368,9 @@
 
       "id": "GER_16MOT_MR32_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第16摩托化步兵师第32摩托化步兵团第2摩托化步兵营",
+      "fullName": "第16摩步师第32摩步团第2摩步营",
 
       "faction": "german",
 
@@ -5406,9 +5406,9 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
-      "parentRegiment": "第32摩托化步兵团",
+      "parentRegiment": "第32摩步团",
 
       "deploymentRole": "combat"
 
@@ -5420,7 +5420,7 @@
 
       "name": "第33炮兵团团部",
 
-      "fullName": "第16摩托化步兵师第33炮兵团团部",
+      "fullName": "第16摩步师第33炮兵团团部",
 
       "faction": "german",
 
@@ -5460,7 +5460,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "parentRegiment": "第33炮兵团",
 
@@ -5474,7 +5474,7 @@
 
       "name": "第33炮兵团团部警卫连",
 
-      "fullName": "第16摩托化步兵师第33炮兵团团部警卫连",
+      "fullName": "第16摩步师第33炮兵团团部警卫连",
 
       "faction": "german",
 
@@ -5514,7 +5514,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "parentRegiment": "第33炮兵团",
 
@@ -5528,7 +5528,7 @@
 
       "name": "第33炮兵团第1炮兵营",
 
-      "fullName": "第16摩托化步兵师第33炮兵团第1炮兵营",
+      "fullName": "第16摩步师第33炮兵团第1炮兵营",
 
       "faction": "german",
 
@@ -5564,7 +5564,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "parentRegiment": "第33炮兵团",
 
@@ -5578,7 +5578,7 @@
 
       "name": "第33炮兵团第2炮兵营",
 
-      "fullName": "第16摩托化步兵师第33炮兵团第2炮兵营",
+      "fullName": "第16摩步师第33炮兵团第2炮兵营",
 
       "faction": "german",
 
@@ -5614,7 +5614,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "parentRegiment": "第33炮兵团",
 
@@ -5626,9 +5626,9 @@
 
       "id": "GER_16MOT_REC",
 
-      "name": "第16摩托化步兵师侦察连",
+      "name": "第16摩步师侦察连",
 
-      "fullName": "第16摩托化步兵师侦察连",
+      "fullName": "第16摩步师侦察连",
 
       "faction": "german",
 
@@ -5664,7 +5664,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "deploymentRole": "recon_screen"
 
@@ -5674,9 +5674,9 @@
 
       "id": "GER_16MOT_ENG",
 
-      "name": "第16摩托化步兵师工兵连",
+      "name": "第16摩步师工兵连",
 
-      "fullName": "第16摩托化步兵师工兵连",
+      "fullName": "第16摩步师工兵连",
 
       "faction": "german",
 
@@ -5712,7 +5712,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "deploymentRole": "support"
 
@@ -5722,9 +5722,9 @@
 
       "id": "GER_16MOT_AT",
 
-      "name": "第16摩托化步兵师反坦克连",
+      "name": "第16摩步师反坦克连",
 
-      "fullName": "第16摩托化步兵师反坦克连",
+      "fullName": "第16摩步师反坦克连",
 
       "faction": "german",
 
@@ -5760,7 +5760,7 @@
 
       "parentCorps": "第48摩托化军",
 
-      "parentDivision": "第16摩托化步兵师",
+      "parentDivision": "第16摩步师",
 
       "deploymentRole": "support"
 
@@ -6284,9 +6284,9 @@
 
       "id": "SOV_20TD_MR41_HQ",
 
-      "name": "第41摩托化步兵团团部",
+      "name": "第41摩步团团部",
 
-      "fullName": "第20坦克师第41摩托化步兵团团部",
+      "fullName": "第20坦克师第41摩步团团部",
 
       "faction": "soviet",
 
@@ -6328,7 +6328,7 @@
 
       "parentDivision": "第20坦克师",
 
-      "parentRegiment": "第41摩托化步兵团",
+      "parentRegiment": "第41摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -6338,9 +6338,9 @@
 
       "id": "SOV_20TD_MR41_GUARD",
 
-      "name": "第41摩托化步兵团团部警卫连",
+      "name": "第41摩步团团部警卫连",
 
-      "fullName": "第20坦克师第41摩托化步兵团团部警卫连",
+      "fullName": "第20坦克师第41摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -6382,7 +6382,7 @@
 
       "parentDivision": "第20坦克师",
 
-      "parentRegiment": "第41摩托化步兵团",
+      "parentRegiment": "第41摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -6392,9 +6392,9 @@
 
       "id": "SOV_20TD_MR41_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第20坦克师第41摩托化步兵团第1摩托化步兵营",
+      "fullName": "第20坦克师第41摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -6432,7 +6432,7 @@
 
       "parentDivision": "第20坦克师",
 
-      "parentRegiment": "第41摩托化步兵团",
+      "parentRegiment": "第41摩步团",
 
       "deploymentRole": "combat"
 
@@ -6442,9 +6442,9 @@
 
       "id": "SOV_20TD_MR41_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第20坦克师第41摩托化步兵团第2摩托化步兵营",
+      "fullName": "第20坦克师第41摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -6482,7 +6482,7 @@
 
       "parentDivision": "第20坦克师",
 
-      "parentRegiment": "第41摩托化步兵团",
+      "parentRegiment": "第41摩步团",
 
       "deploymentRole": "combat"
 
@@ -7258,9 +7258,9 @@
 
       "id": "SOV_35TD_MR45_HQ",
 
-      "name": "第45摩托化步兵团团部",
+      "name": "第45摩步团团部",
 
-      "fullName": "第35坦克师第45摩托化步兵团团部",
+      "fullName": "第35坦克师第45摩步团团部",
 
       "faction": "soviet",
 
@@ -7302,7 +7302,7 @@
 
       "parentDivision": "第35坦克师",
 
-      "parentRegiment": "第45摩托化步兵团",
+      "parentRegiment": "第45摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -7312,9 +7312,9 @@
 
       "id": "SOV_35TD_MR45_GUARD",
 
-      "name": "第45摩托化步兵团团部警卫连",
+      "name": "第45摩步团团部警卫连",
 
-      "fullName": "第35坦克师第45摩托化步兵团团部警卫连",
+      "fullName": "第35坦克师第45摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -7356,7 +7356,7 @@
 
       "parentDivision": "第35坦克师",
 
-      "parentRegiment": "第45摩托化步兵团",
+      "parentRegiment": "第45摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -7366,9 +7366,9 @@
 
       "id": "SOV_35TD_MR45_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第35坦克师第45摩托化步兵团第1摩托化步兵营",
+      "fullName": "第35坦克师第45摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -7406,7 +7406,7 @@
 
       "parentDivision": "第35坦克师",
 
-      "parentRegiment": "第45摩托化步兵团",
+      "parentRegiment": "第45摩步团",
 
       "deploymentRole": "combat"
 
@@ -7416,9 +7416,9 @@
 
       "id": "SOV_35TD_MR45_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第35坦克师第45摩托化步兵团第2摩托化步兵营",
+      "fullName": "第35坦克师第45摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -7456,7 +7456,7 @@
 
       "parentDivision": "第35坦克师",
 
-      "parentRegiment": "第45摩托化步兵团",
+      "parentRegiment": "第45摩步团",
 
       "deploymentRole": "combat"
 
@@ -7974,9 +7974,9 @@
 
       "id": "SOV_131MD_MR48_HQ",
 
-      "name": "第48摩托化步兵团团部",
+      "name": "第48摩步团团部",
 
-      "fullName": "第131摩托化师第48摩托化步兵团团部",
+      "fullName": "第131摩托化师第48摩步团团部",
 
       "faction": "soviet",
 
@@ -8018,7 +8018,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第48摩托化步兵团",
+      "parentRegiment": "第48摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -8028,9 +8028,9 @@
 
       "id": "SOV_131MD_MR48_GUARD",
 
-      "name": "第48摩托化步兵团团部警卫连",
+      "name": "第48摩步团团部警卫连",
 
-      "fullName": "第131摩托化师第48摩托化步兵团团部警卫连",
+      "fullName": "第131摩托化师第48摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -8072,7 +8072,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第48摩托化步兵团",
+      "parentRegiment": "第48摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -8082,9 +8082,9 @@
 
       "id": "SOV_131MD_MR48_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第131摩托化师第48摩托化步兵团第1摩托化步兵营",
+      "fullName": "第131摩托化师第48摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -8122,7 +8122,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第48摩托化步兵团",
+      "parentRegiment": "第48摩步团",
 
       "deploymentRole": "combat"
 
@@ -8132,9 +8132,9 @@
 
       "id": "SOV_131MD_MR48_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第131摩托化师第48摩托化步兵团第2摩托化步兵营",
+      "fullName": "第131摩托化师第48摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -8172,7 +8172,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第48摩托化步兵团",
+      "parentRegiment": "第48摩步团",
 
       "deploymentRole": "combat"
 
@@ -8182,9 +8182,9 @@
 
       "id": "SOV_131MD_MR49_HQ",
 
-      "name": "第49摩托化步兵团团部",
+      "name": "第49摩步团团部",
 
-      "fullName": "第131摩托化师第49摩托化步兵团团部",
+      "fullName": "第131摩托化师第49摩步团团部",
 
       "faction": "soviet",
 
@@ -8226,7 +8226,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第49摩托化步兵团",
+      "parentRegiment": "第49摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -8236,9 +8236,9 @@
 
       "id": "SOV_131MD_MR49_GUARD",
 
-      "name": "第49摩托化步兵团团部警卫连",
+      "name": "第49摩步团团部警卫连",
 
-      "fullName": "第131摩托化师第49摩托化步兵团团部警卫连",
+      "fullName": "第131摩托化师第49摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -8280,7 +8280,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第49摩托化步兵团",
+      "parentRegiment": "第49摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -8290,9 +8290,9 @@
 
       "id": "SOV_131MD_MR49_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第131摩托化师第49摩托化步兵团第1摩托化步兵营",
+      "fullName": "第131摩托化师第49摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -8330,7 +8330,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第49摩托化步兵团",
+      "parentRegiment": "第49摩步团",
 
       "deploymentRole": "combat"
 
@@ -8340,9 +8340,9 @@
 
       "id": "SOV_131MD_MR49_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第131摩托化师第49摩托化步兵团第2摩托化步兵营",
+      "fullName": "第131摩托化师第49摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -8380,7 +8380,7 @@
 
       "parentDivision": "第131摩托化师",
 
-      "parentRegiment": "第49摩托化步兵团",
+      "parentRegiment": "第49摩步团",
 
       "deploymentRole": "combat"
 
@@ -9256,9 +9256,9 @@
 
       "id": "SOV_40TD_MR53_HQ",
 
-      "name": "第53摩托化步兵团团部",
+      "name": "第53摩步团团部",
 
-      "fullName": "第40坦克师第53摩托化步兵团团部",
+      "fullName": "第40坦克师第53摩步团团部",
 
       "faction": "soviet",
 
@@ -9300,7 +9300,7 @@
 
       "parentDivision": "第40坦克师",
 
-      "parentRegiment": "第53摩托化步兵团",
+      "parentRegiment": "第53摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -9310,9 +9310,9 @@
 
       "id": "SOV_40TD_MR53_GUARD",
 
-      "name": "第53摩托化步兵团团部警卫连",
+      "name": "第53摩步团团部警卫连",
 
-      "fullName": "第40坦克师第53摩托化步兵团团部警卫连",
+      "fullName": "第40坦克师第53摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -9354,7 +9354,7 @@
 
       "parentDivision": "第40坦克师",
 
-      "parentRegiment": "第53摩托化步兵团",
+      "parentRegiment": "第53摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -9364,9 +9364,9 @@
 
       "id": "SOV_40TD_MR53_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第40坦克师第53摩托化步兵团第1摩托化步兵营",
+      "fullName": "第40坦克师第53摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -9404,7 +9404,7 @@
 
       "parentDivision": "第40坦克师",
 
-      "parentRegiment": "第53摩托化步兵团",
+      "parentRegiment": "第53摩步团",
 
       "deploymentRole": "combat"
 
@@ -9414,9 +9414,9 @@
 
       "id": "SOV_40TD_MR53_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第40坦克师第53摩托化步兵团第2摩托化步兵营",
+      "fullName": "第40坦克师第53摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -9454,7 +9454,7 @@
 
       "parentDivision": "第40坦克师",
 
-      "parentRegiment": "第53摩托化步兵团",
+      "parentRegiment": "第53摩步团",
 
       "deploymentRole": "combat"
 
@@ -10230,9 +10230,9 @@
 
       "id": "SOV_43TD_MR57_HQ",
 
-      "name": "第57摩托化步兵团团部",
+      "name": "第57摩步团团部",
 
-      "fullName": "第43坦克师第57摩托化步兵团团部",
+      "fullName": "第43坦克师第57摩步团团部",
 
       "faction": "soviet",
 
@@ -10274,7 +10274,7 @@
 
       "parentDivision": "第43坦克师",
 
-      "parentRegiment": "第57摩托化步兵团",
+      "parentRegiment": "第57摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -10284,9 +10284,9 @@
 
       "id": "SOV_43TD_MR57_GUARD",
 
-      "name": "第57摩托化步兵团团部警卫连",
+      "name": "第57摩步团团部警卫连",
 
-      "fullName": "第43坦克师第57摩托化步兵团团部警卫连",
+      "fullName": "第43坦克师第57摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -10328,7 +10328,7 @@
 
       "parentDivision": "第43坦克师",
 
-      "parentRegiment": "第57摩托化步兵团",
+      "parentRegiment": "第57摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -10338,9 +10338,9 @@
 
       "id": "SOV_43TD_MR57_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第43坦克师第57摩托化步兵团第1摩托化步兵营",
+      "fullName": "第43坦克师第57摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -10378,7 +10378,7 @@
 
       "parentDivision": "第43坦克师",
 
-      "parentRegiment": "第57摩托化步兵团",
+      "parentRegiment": "第57摩步团",
 
       "deploymentRole": "combat"
 
@@ -10388,9 +10388,9 @@
 
       "id": "SOV_43TD_MR57_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第43坦克师第57摩托化步兵团第2摩托化步兵营",
+      "fullName": "第43坦克师第57摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -10428,7 +10428,7 @@
 
       "parentDivision": "第43坦克师",
 
-      "parentRegiment": "第57摩托化步兵团",
+      "parentRegiment": "第57摩步团",
 
       "deploymentRole": "combat"
 
@@ -10946,9 +10946,9 @@
 
       "id": "SOV_213MD_MR60_HQ",
 
-      "name": "第60摩托化步兵团团部",
+      "name": "第60摩步团团部",
 
-      "fullName": "第213摩托化师第60摩托化步兵团团部",
+      "fullName": "第213摩托化师第60摩步团团部",
 
       "faction": "soviet",
 
@@ -10990,7 +10990,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第60摩托化步兵团",
+      "parentRegiment": "第60摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -11000,9 +11000,9 @@
 
       "id": "SOV_213MD_MR60_GUARD",
 
-      "name": "第60摩托化步兵团团部警卫连",
+      "name": "第60摩步团团部警卫连",
 
-      "fullName": "第213摩托化师第60摩托化步兵团团部警卫连",
+      "fullName": "第213摩托化师第60摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -11044,7 +11044,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第60摩托化步兵团",
+      "parentRegiment": "第60摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -11054,9 +11054,9 @@
 
       "id": "SOV_213MD_MR60_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第213摩托化师第60摩托化步兵团第1摩托化步兵营",
+      "fullName": "第213摩托化师第60摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -11094,7 +11094,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第60摩托化步兵团",
+      "parentRegiment": "第60摩步团",
 
       "deploymentRole": "combat"
 
@@ -11104,9 +11104,9 @@
 
       "id": "SOV_213MD_MR60_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第213摩托化师第60摩托化步兵团第2摩托化步兵营",
+      "fullName": "第213摩托化师第60摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -11144,7 +11144,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第60摩托化步兵团",
+      "parentRegiment": "第60摩步团",
 
       "deploymentRole": "combat"
 
@@ -11154,9 +11154,9 @@
 
       "id": "SOV_213MD_MR61_HQ",
 
-      "name": "第61摩托化步兵团团部",
+      "name": "第61摩步团团部",
 
-      "fullName": "第213摩托化师第61摩托化步兵团团部",
+      "fullName": "第213摩托化师第61摩步团团部",
 
       "faction": "soviet",
 
@@ -11198,7 +11198,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第61摩托化步兵团",
+      "parentRegiment": "第61摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -11208,9 +11208,9 @@
 
       "id": "SOV_213MD_MR61_GUARD",
 
-      "name": "第61摩托化步兵团团部警卫连",
+      "name": "第61摩步团团部警卫连",
 
-      "fullName": "第213摩托化师第61摩托化步兵团团部警卫连",
+      "fullName": "第213摩托化师第61摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -11252,7 +11252,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第61摩托化步兵团",
+      "parentRegiment": "第61摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -11262,9 +11262,9 @@
 
       "id": "SOV_213MD_MR61_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第213摩托化师第61摩托化步兵团第1摩托化步兵营",
+      "fullName": "第213摩托化师第61摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -11302,7 +11302,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第61摩托化步兵团",
+      "parentRegiment": "第61摩步团",
 
       "deploymentRole": "combat"
 
@@ -11312,9 +11312,9 @@
 
       "id": "SOV_213MD_MR61_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第213摩托化师第61摩托化步兵团第2摩托化步兵营",
+      "fullName": "第213摩托化师第61摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -11352,7 +11352,7 @@
 
       "parentDivision": "第213摩托化师",
 
-      "parentRegiment": "第61摩托化步兵团",
+      "parentRegiment": "第61摩步团",
 
       "deploymentRole": "combat"
 
@@ -12228,9 +12228,9 @@
 
       "id": "SOV_12TD_MR65_HQ",
 
-      "name": "第65摩托化步兵团团部",
+      "name": "第65摩步团团部",
 
-      "fullName": "第12坦克师第65摩托化步兵团团部",
+      "fullName": "第12坦克师第65摩步团团部",
 
       "faction": "soviet",
 
@@ -12272,7 +12272,7 @@
 
       "parentDivision": "第12坦克师",
 
-      "parentRegiment": "第65摩托化步兵团",
+      "parentRegiment": "第65摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -12282,9 +12282,9 @@
 
       "id": "SOV_12TD_MR65_GUARD",
 
-      "name": "第65摩托化步兵团团部警卫连",
+      "name": "第65摩步团团部警卫连",
 
-      "fullName": "第12坦克师第65摩托化步兵团团部警卫连",
+      "fullName": "第12坦克师第65摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -12326,7 +12326,7 @@
 
       "parentDivision": "第12坦克师",
 
-      "parentRegiment": "第65摩托化步兵团",
+      "parentRegiment": "第65摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -12336,9 +12336,9 @@
 
       "id": "SOV_12TD_MR65_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第12坦克师第65摩托化步兵团第1摩托化步兵营",
+      "fullName": "第12坦克师第65摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -12376,7 +12376,7 @@
 
       "parentDivision": "第12坦克师",
 
-      "parentRegiment": "第65摩托化步兵团",
+      "parentRegiment": "第65摩步团",
 
       "deploymentRole": "combat"
 
@@ -12386,9 +12386,9 @@
 
       "id": "SOV_12TD_MR65_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第12坦克师第65摩托化步兵团第2摩托化步兵营",
+      "fullName": "第12坦克师第65摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -12426,7 +12426,7 @@
 
       "parentDivision": "第12坦克师",
 
-      "parentRegiment": "第65摩托化步兵团",
+      "parentRegiment": "第65摩步团",
 
       "deploymentRole": "combat"
 
@@ -13202,9 +13202,9 @@
 
       "id": "SOV_34TD_MR69_HQ",
 
-      "name": "第69摩托化步兵团团部",
+      "name": "第69摩步团团部",
 
-      "fullName": "第34坦克师第69摩托化步兵团团部",
+      "fullName": "第34坦克师第69摩步团团部",
 
       "faction": "soviet",
 
@@ -13246,7 +13246,7 @@
 
       "parentDivision": "第34坦克师",
 
-      "parentRegiment": "第69摩托化步兵团",
+      "parentRegiment": "第69摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -13256,9 +13256,9 @@
 
       "id": "SOV_34TD_MR69_GUARD",
 
-      "name": "第69摩托化步兵团团部警卫连",
+      "name": "第69摩步团团部警卫连",
 
-      "fullName": "第34坦克师第69摩托化步兵团团部警卫连",
+      "fullName": "第34坦克师第69摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -13300,7 +13300,7 @@
 
       "parentDivision": "第34坦克师",
 
-      "parentRegiment": "第69摩托化步兵团",
+      "parentRegiment": "第69摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -13310,9 +13310,9 @@
 
       "id": "SOV_34TD_MR69_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第34坦克师第69摩托化步兵团第1摩托化步兵营",
+      "fullName": "第34坦克师第69摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -13350,7 +13350,7 @@
 
       "parentDivision": "第34坦克师",
 
-      "parentRegiment": "第69摩托化步兵团",
+      "parentRegiment": "第69摩步团",
 
       "deploymentRole": "combat"
 
@@ -13360,9 +13360,9 @@
 
       "id": "SOV_34TD_MR69_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第34坦克师第69摩托化步兵团第2摩托化步兵营",
+      "fullName": "第34坦克师第69摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -13400,7 +13400,7 @@
 
       "parentDivision": "第34坦克师",
 
-      "parentRegiment": "第69摩托化步兵团",
+      "parentRegiment": "第69摩步团",
 
       "deploymentRole": "combat"
 
@@ -13918,9 +13918,9 @@
 
       "id": "SOV_7MD_MR72_HQ",
 
-      "name": "第72摩托化步兵团团部",
+      "name": "第72摩步团团部",
 
-      "fullName": "第7摩托化师第72摩托化步兵团团部",
+      "fullName": "第7摩托化师第72摩步团团部",
 
       "faction": "soviet",
 
@@ -13962,7 +13962,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第72摩托化步兵团",
+      "parentRegiment": "第72摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -13972,9 +13972,9 @@
 
       "id": "SOV_7MD_MR72_GUARD",
 
-      "name": "第72摩托化步兵团团部警卫连",
+      "name": "第72摩步团团部警卫连",
 
-      "fullName": "第7摩托化师第72摩托化步兵团团部警卫连",
+      "fullName": "第7摩托化师第72摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -14016,7 +14016,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第72摩托化步兵团",
+      "parentRegiment": "第72摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -14026,9 +14026,9 @@
 
       "id": "SOV_7MD_MR72_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第7摩托化师第72摩托化步兵团第1摩托化步兵营",
+      "fullName": "第7摩托化师第72摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -14066,7 +14066,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第72摩托化步兵团",
+      "parentRegiment": "第72摩步团",
 
       "deploymentRole": "combat"
 
@@ -14076,9 +14076,9 @@
 
       "id": "SOV_7MD_MR72_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第7摩托化师第72摩托化步兵团第2摩托化步兵营",
+      "fullName": "第7摩托化师第72摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -14116,7 +14116,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第72摩托化步兵团",
+      "parentRegiment": "第72摩步团",
 
       "deploymentRole": "combat"
 
@@ -14126,9 +14126,9 @@
 
       "id": "SOV_7MD_MR73_HQ",
 
-      "name": "第73摩托化步兵团团部",
+      "name": "第73摩步团团部",
 
-      "fullName": "第7摩托化师第73摩托化步兵团团部",
+      "fullName": "第7摩托化师第73摩步团团部",
 
       "faction": "soviet",
 
@@ -14170,7 +14170,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第73摩托化步兵团",
+      "parentRegiment": "第73摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -14180,9 +14180,9 @@
 
       "id": "SOV_7MD_MR73_GUARD",
 
-      "name": "第73摩托化步兵团团部警卫连",
+      "name": "第73摩步团团部警卫连",
 
-      "fullName": "第7摩托化师第73摩托化步兵团团部警卫连",
+      "fullName": "第7摩托化师第73摩步团团部警卫连",
 
       "faction": "soviet",
 
@@ -14224,7 +14224,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第73摩托化步兵团",
+      "parentRegiment": "第73摩步团",
 
       "deploymentRole": "regimental_command"
 
@@ -14234,9 +14234,9 @@
 
       "id": "SOV_7MD_MR73_BN1",
 
-      "name": "第1摩托化步兵营",
+      "name": "第1摩步营",
 
-      "fullName": "第7摩托化师第73摩托化步兵团第1摩托化步兵营",
+      "fullName": "第7摩托化师第73摩步团第1摩步营",
 
       "faction": "soviet",
 
@@ -14274,7 +14274,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第73摩托化步兵团",
+      "parentRegiment": "第73摩步团",
 
       "deploymentRole": "combat"
 
@@ -14284,9 +14284,9 @@
 
       "id": "SOV_7MD_MR73_BN2",
 
-      "name": "第2摩托化步兵营",
+      "name": "第2摩步营",
 
-      "fullName": "第7摩托化师第73摩托化步兵团第2摩托化步兵营",
+      "fullName": "第7摩托化师第73摩步团第2摩步营",
 
       "faction": "soviet",
 
@@ -14324,7 +14324,7 @@
 
       "parentDivision": "第7摩托化师",
 
-      "parentRegiment": "第73摩托化步兵团",
+      "parentRegiment": "第73摩步团",
 
       "deploymentRole": "combat"
 
