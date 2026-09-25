@@ -1,0 +1,2895 @@
+{
+
+  "version": "0.8-tactical",
+
+  "scenario": "Dubno 1941",
+
+  "units": [
+
+    {
+
+      "id": "GER_PZ_01",
+
+      "name": "第11装甲营",
+
+      "faction": "german",
+
+      "type": "armor",
+
+      "q": 12,
+
+      "r": 11,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 90,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_PZ_02",
+
+      "name": "第13装甲营",
+
+      "faction": "german",
+
+      "type": "armor",
+
+      "q": 14,
+
+      "r": 12,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 88,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_PZ_03",
+
+      "name": "第14装甲营",
+
+      "faction": "german",
+
+      "type": "armor",
+
+      "q": 16,
+
+      "r": 13,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 87,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_MOT_01",
+
+      "name": "第16摩托化步兵营",
+
+      "faction": "german",
+
+      "type": "motorized",
+
+      "q": 11,
+
+      "r": 13,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 85,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_MOT_02",
+
+      "name": "第25摩托化步兵营",
+
+      "faction": "german",
+
+      "type": "motorized",
+
+      "q": 13,
+
+      "r": 14,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_INF_01",
+
+      "name": "第57步兵营",
+
+      "faction": "german",
+
+      "type": "infantry",
+
+      "q": 9,
+
+      "r": 12,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 82,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_INF_02",
+
+      "name": "第75步兵营",
+
+      "faction": "german",
+
+      "type": "infantry",
+
+      "q": 10,
+
+      "r": 15,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_ART_01",
+
+      "name": "炮兵第1营",
+
+      "faction": "german",
+
+      "type": "artillery",
+
+      "q": 8,
+
+      "r": 14,
+
+      "strength": 300,
+
+      "maxStrength": 300,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 82,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 500,
+
+      "maxManpower": 500,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_AT_01",
+
+      "name": "反坦克第1连",
+
+      "faction": "german",
+
+      "type": "antitank",
+
+      "q": 12,
+
+      "r": 15,
+
+      "strength": 150,
+
+      "maxStrength": 150,
+
+      "attack": 9,
+
+      "defense": 5,
+
+      "movement": 4,
+
+      "range": 2,
+
+      "morale": 83,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 150,
+
+      "maxManpower": 150,
+
+      "minRange": 1,
+
+      "maxRange": 2,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_REC_01",
+
+      "name": "装甲侦察连",
+
+      "faction": "german",
+
+      "type": "reconnaissance",
+
+      "q": 17,
+
+      "r": 11,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 5,
+
+      "defense": 4,
+
+      "movement": 9,
+
+      "range": 1,
+
+      "morale": 86,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_ENG_01",
+
+      "name": "工兵第1连",
+
+      "faction": "german",
+
+      "type": "engineer",
+
+      "q": 11,
+
+      "r": 16,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_HQ_01",
+
+      "name": "第1装甲集群司令部",
+
+      "faction": "german",
+
+      "type": "headquarters",
+
+      "q": 7,
+
+      "r": 13,
+
+      "strength": 120,
+
+      "maxStrength": 120,
+
+      "attack": 2,
+
+      "defense": 3,
+
+      "movement": 5,
+
+      "range": 1,
+
+      "morale": 95,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 120,
+
+      "maxManpower": 120,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_TANK_01",
+
+      "name": "第8坦克营",
+
+      "faction": "soviet",
+
+      "type": "armor",
+
+      "q": 24,
+
+      "r": 14,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 72,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_TANK_02",
+
+      "name": "第10坦克营",
+
+      "faction": "soviet",
+
+      "type": "armor",
+
+      "q": 26,
+
+      "r": 15,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 70,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_TANK_03",
+
+      "name": "第12坦克营",
+
+      "faction": "soviet",
+
+      "type": "armor",
+
+      "q": 28,
+
+      "r": 16,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 68,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_TANK_04",
+
+      "name": "第32坦克营",
+
+      "faction": "soviet",
+
+      "type": "armor",
+
+      "q": 25,
+
+      "r": 18,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 69,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_MOT_01",
+
+      "name": "第7摩托化步兵营",
+
+      "faction": "soviet",
+
+      "type": "motorized",
+
+      "q": 23,
+
+      "r": 16,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 70,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_MOT_02",
+
+      "name": "第81摩托化步兵营",
+
+      "faction": "soviet",
+
+      "type": "motorized",
+
+      "q": 27,
+
+      "r": 19,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 67,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_01",
+
+      "name": "第87步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 22,
+
+      "r": 18,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 66,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_02",
+
+      "name": "第124步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 24,
+
+      "r": 20,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 65,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_03",
+
+      "name": "第135步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 29,
+
+      "r": 18,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 64,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_ART_01",
+
+      "name": "炮兵第1营",
+
+      "faction": "soviet",
+
+      "type": "artillery",
+
+      "q": 26,
+
+      "r": 21,
+
+      "strength": 300,
+
+      "maxStrength": 300,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 68,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 500,
+
+      "maxManpower": 500,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_ART_02",
+
+      "name": "炮兵第2营",
+
+      "faction": "soviet",
+
+      "type": "artillery",
+
+      "q": 30,
+
+      "r": 20,
+
+      "strength": 300,
+
+      "maxStrength": 300,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 66,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 500,
+
+      "maxManpower": 500,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_AT_01",
+
+      "name": "反坦克第1连",
+
+      "faction": "soviet",
+
+      "type": "antitank",
+
+      "q": 21,
+
+      "r": 17,
+
+      "strength": 150,
+
+      "maxStrength": 150,
+
+      "attack": 9,
+
+      "defense": 5,
+
+      "movement": 4,
+
+      "range": 2,
+
+      "morale": 67,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 150,
+
+      "maxManpower": 150,
+
+      "minRange": 1,
+
+      "maxRange": 2,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_REC_01",
+
+      "name": "侦察连",
+
+      "faction": "soviet",
+
+      "type": "reconnaissance",
+
+      "q": 20,
+
+      "r": 15,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 5,
+
+      "defense": 4,
+
+      "movement": 9,
+
+      "range": 1,
+
+      "morale": 71,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_ENG_01",
+
+      "name": "工兵第1连",
+
+      "faction": "soviet",
+
+      "type": "engineer",
+
+      "q": 23,
+
+      "r": 21,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 68,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_HQ_01",
+
+      "name": "第8机械化军司令部",
+
+      "faction": "soviet",
+
+      "type": "headquarters",
+
+      "q": 28,
+
+      "r": 22,
+
+      "strength": 120,
+
+      "maxStrength": 120,
+
+      "attack": 2,
+
+      "defense": 3,
+
+      "movement": 5,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 120,
+
+      "maxManpower": 120,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_INF_03",
+
+      "name": "第3步兵营",
+
+      "faction": "german",
+
+      "type": "infantry",
+
+      "q": 8,
+
+      "r": 11,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_INF_04",
+
+      "name": "第4步兵营",
+
+      "faction": "german",
+
+      "type": "infantry",
+
+      "q": 9,
+
+      "r": 14,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_INF_05",
+
+      "name": "第5步兵营",
+
+      "faction": "german",
+
+      "type": "infantry",
+
+      "q": 10,
+
+      "r": 17,
+
+      "strength": 850,
+
+      "maxStrength": 850,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 850,
+
+      "maxManpower": 850,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_INF_06",
+
+      "name": "第6步兵营",
+
+      "faction": "german",
+
+      "type": "infantry",
+
+      "q": 12,
+
+      "r": 17,
+
+      "strength": 850,
+
+      "maxStrength": 850,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 850,
+
+      "maxManpower": 850,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_MOT_03",
+
+      "name": "第3摩托化步兵营",
+
+      "faction": "german",
+
+      "type": "motorized",
+
+      "q": 13,
+
+      "r": 10,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_MOT_04",
+
+      "name": "第4摩托化步兵营",
+
+      "faction": "german",
+
+      "type": "motorized",
+
+      "q": 15,
+
+      "r": 11,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_MOT_05",
+
+      "name": "第5摩托化步兵营",
+
+      "faction": "german",
+
+      "type": "motorized",
+
+      "q": 15,
+
+      "r": 15,
+
+      "strength": 750,
+
+      "maxStrength": 750,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 750,
+
+      "maxManpower": 750,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_PZ_04",
+
+      "name": "第4装甲营",
+
+      "faction": "german",
+
+      "type": "armor",
+
+      "q": 17,
+
+      "r": 13,
+
+      "strength": 650,
+
+      "maxStrength": 650,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 87,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 650,
+
+      "maxManpower": 650,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_PZ_05",
+
+      "name": "第5装甲营",
+
+      "faction": "german",
+
+      "type": "armor",
+
+      "q": 18,
+
+      "r": 14,
+
+      "strength": 600,
+
+      "maxStrength": 600,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 87,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 600,
+
+      "maxManpower": 600,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_ART_02",
+
+      "name": "第2炮兵营",
+
+      "faction": "german",
+
+      "type": "artillery",
+
+      "q": 7,
+
+      "r": 15,
+
+      "strength": 300,
+
+      "maxStrength": 300,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 82,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 500,
+
+      "maxManpower": 500,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_ART_03",
+
+      "name": "第3炮兵营",
+
+      "faction": "german",
+
+      "type": "artillery",
+
+      "q": 9,
+
+      "r": 16,
+
+      "strength": 450,
+
+      "maxStrength": 450,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 82,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 450,
+
+      "maxManpower": 450,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_AT_02",
+
+      "name": "第2反坦克连",
+
+      "faction": "german",
+
+      "type": "antitank",
+
+      "q": 11,
+
+      "r": 14,
+
+      "strength": 150,
+
+      "maxStrength": 150,
+
+      "attack": 9,
+
+      "defense": 5,
+
+      "movement": 4,
+
+      "range": 2,
+
+      "morale": 83,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 150,
+
+      "maxManpower": 150,
+
+      "minRange": 1,
+
+      "maxRange": 2,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_AT_03",
+
+      "name": "第3反坦克连",
+
+      "faction": "german",
+
+      "type": "antitank",
+
+      "q": 14,
+
+      "r": 16,
+
+      "strength": 150,
+
+      "maxStrength": 150,
+
+      "attack": 9,
+
+      "defense": 5,
+
+      "movement": 4,
+
+      "range": 2,
+
+      "morale": 83,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 150,
+
+      "maxManpower": 150,
+
+      "minRange": 1,
+
+      "maxRange": 2,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_REC_02",
+
+      "name": "第2侦察连",
+
+      "faction": "german",
+
+      "type": "reconnaissance",
+
+      "q": 18,
+
+      "r": 11,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 5,
+
+      "defense": 4,
+
+      "movement": 9,
+
+      "range": 1,
+
+      "morale": 86,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_REC_03",
+
+      "name": "第3侦察连",
+
+      "faction": "german",
+
+      "type": "reconnaissance",
+
+      "q": 16,
+
+      "r": 10,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 5,
+
+      "defense": 4,
+
+      "movement": 9,
+
+      "range": 1,
+
+      "morale": 86,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_ENG_02",
+
+      "name": "第2工兵连",
+
+      "faction": "german",
+
+      "type": "engineer",
+
+      "q": 10,
+
+      "r": 13,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_ENG_03",
+
+      "name": "第3工兵连",
+
+      "faction": "german",
+
+      "type": "engineer",
+
+      "q": 13,
+
+      "r": 16,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 84,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "GER_HQ_02",
+
+      "name": "司令部警卫连",
+
+      "faction": "german",
+
+      "type": "headquarters",
+
+      "q": 7,
+
+      "r": 12,
+
+      "strength": 120,
+
+      "maxStrength": 120,
+
+      "attack": 4,
+
+      "defense": 3,
+
+      "movement": 5,
+
+      "range": 1,
+
+      "morale": 95,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 120,
+
+      "maxManpower": 120,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_04",
+
+      "name": "第4步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 21,
+
+      "r": 19,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 64,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_05",
+
+      "name": "第5步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 22,
+
+      "r": 20,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 64,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_06",
+
+      "name": "第6步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 25,
+
+      "r": 20,
+
+      "strength": 850,
+
+      "maxStrength": 850,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 64,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 850,
+
+      "maxManpower": 850,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_07",
+
+      "name": "第7步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 28,
+
+      "r": 20,
+
+      "strength": 850,
+
+      "maxStrength": 850,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 64,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 850,
+
+      "maxManpower": 850,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_INF_08",
+
+      "name": "第8步兵营",
+
+      "faction": "soviet",
+
+      "type": "infantry",
+
+      "q": 30,
+
+      "r": 18,
+
+      "strength": 900,
+
+      "maxStrength": 900,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 64,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 900,
+
+      "maxManpower": 900,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_TANK_05",
+
+      "name": "第5坦克营",
+
+      "faction": "soviet",
+
+      "type": "armor",
+
+      "q": 23,
+
+      "r": 14,
+
+      "strength": 600,
+
+      "maxStrength": 600,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 69,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 600,
+
+      "maxManpower": 600,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_TANK_06",
+
+      "name": "第6坦克营",
+
+      "faction": "soviet",
+
+      "type": "armor",
+
+      "q": 27,
+
+      "r": 16,
+
+      "strength": 600,
+
+      "maxStrength": 600,
+
+      "attack": 10,
+
+      "defense": 9,
+
+      "movement": 8,
+
+      "range": 1,
+
+      "morale": 69,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 600,
+
+      "maxManpower": 600,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_MOT_03",
+
+      "name": "第3摩托化步兵营",
+
+      "faction": "soviet",
+
+      "type": "motorized",
+
+      "q": 25,
+
+      "r": 16,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 67,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_MOT_04",
+
+      "name": "第4摩托化步兵营",
+
+      "faction": "soviet",
+
+      "type": "motorized",
+
+      "q": 29,
+
+      "r": 19,
+
+      "strength": 800,
+
+      "maxStrength": 800,
+
+      "attack": 7,
+
+      "defense": 6,
+
+      "movement": 7,
+
+      "range": 1,
+
+      "morale": 67,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 800,
+
+      "maxManpower": 800,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_ART_03",
+
+      "name": "第3炮兵营",
+
+      "faction": "soviet",
+
+      "type": "artillery",
+
+      "q": 24,
+
+      "r": 22,
+
+      "strength": 500,
+
+      "maxStrength": 500,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 66,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 500,
+
+      "maxManpower": 500,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_ART_04",
+
+      "name": "第4炮兵营",
+
+      "faction": "soviet",
+
+      "type": "artillery",
+
+      "q": 29,
+
+      "r": 22,
+
+      "strength": 500,
+
+      "maxStrength": 500,
+
+      "attack": 8,
+
+      "defense": 4,
+
+      "movement": 4,
+
+      "range": 3,
+
+      "morale": 66,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "battalion",
+
+      "manpower": 500,
+
+      "maxManpower": 500,
+
+      "minRange": 2,
+
+      "maxRange": 3,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_AT_02",
+
+      "name": "第2反坦克连",
+
+      "faction": "soviet",
+
+      "type": "antitank",
+
+      "q": 22,
+
+      "r": 16,
+
+      "strength": 150,
+
+      "maxStrength": 150,
+
+      "attack": 9,
+
+      "defense": 5,
+
+      "movement": 4,
+
+      "range": 2,
+
+      "morale": 67,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 150,
+
+      "maxManpower": 150,
+
+      "minRange": 1,
+
+      "maxRange": 2,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_REC_02",
+
+      "name": "第2侦察连",
+
+      "faction": "soviet",
+
+      "type": "reconnaissance",
+
+      "q": 21,
+
+      "r": 14,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 5,
+
+      "defense": 4,
+
+      "movement": 9,
+
+      "range": 1,
+
+      "morale": 71,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_ENG_02",
+
+      "name": "第2工兵连",
+
+      "faction": "soviet",
+
+      "type": "engineer",
+
+      "q": 26,
+
+      "r": 22,
+
+      "strength": 180,
+
+      "maxStrength": 180,
+
+      "attack": 6,
+
+      "defense": 7,
+
+      "movement": 4,
+
+      "range": 1,
+
+      "morale": 68,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 180,
+
+      "maxManpower": 180,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    },
+
+    {
+
+      "id": "SOV_HQ_02",
+
+      "name": "司令部警卫连",
+
+      "faction": "soviet",
+
+      "type": "headquarters",
+
+      "q": 31,
+
+      "r": 21,
+
+      "strength": 120,
+
+      "maxStrength": 120,
+
+      "attack": 4,
+
+      "defense": 3,
+
+      "movement": 5,
+
+      "range": 1,
+
+      "morale": 80,
+
+      "suppression": 0,
+
+      "fatigue": 0,
+
+      "ammo": 100,
+
+      "echelon": "company",
+
+      "manpower": 120,
+
+      "maxManpower": 120,
+
+      "minRange": 1,
+
+      "maxRange": 1,
+
+      "ammunition": 100
+
+    }
+
+  ],
+
+  "scale": "battalion-company",
+
+  "notes": "战术抽象版：生命值等于编制人数；营级约500-900，连级约120-180；炮兵射程2-3格。"
+
+}
