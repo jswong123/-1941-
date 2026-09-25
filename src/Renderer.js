@@ -6,7 +6,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // Renderer.js
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -22,7 +38,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 //
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -38,7 +70,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // V0.4A
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -54,7 +102,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // 功能：
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -70,7 +134,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // - 地形
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -86,7 +166,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // - 道路
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -102,7 +198,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // - 城镇
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -118,6 +230,14 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // - 单位选中框
 
  
@@ -126,7 +246,23 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 // - 移动范围
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -150,7 +286,31 @@
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
 import {
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -166,7 +326,119 @@ import {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
 } from "./Hex.js";
+
+ 
+
+// ============================================================
+
+// 地图主题
+
+// 修改 ACTIVE_MAP_THEME 即可切换整张地图的视觉风格。
+
+// ============================================================
+
+ 
+
+const MAP_THEMES = {
+
+    easternFront1941: {
+
+        canvas: "#8f9078",
+
+        plain: "#b4b28f",
+
+        forest: "#65705a",
+
+        marsh: "#87917b",
+
+        urban: "#aaa184",
+
+        water: "#7693a1",
+
+        grid: "#747660",
+
+        road: "#a38e69",
+
+        railway: "#57564c",
+
+        river: "#668ba0",
+
+        city: "#34352e",
+
+        cityText: "#4c493f"
+
+    },
+
+ 
+
+    plaStaffMap: {
+
+        canvas: "#aaa98e",
+
+        plain: "#c3c09c",
+
+        forest: "#69745d",
+
+        marsh: "#89917a",
+
+        urban: "#a9a187",
+
+        water: "#7897a4",
+
+        grid: "#85856f",
+
+        road: "#9b8664",
+
+        railway: "#55554d",
+
+        river: "#638ca0",
+
+        city: "#30332d",
+
+        cityText: "#3e4038"
+
+    }
+
+};
+
+ 
+
+const ACTIVE_MAP_THEME = "easternFront1941";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -206,7 +478,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     constructor(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -222,7 +518,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         world,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -238,7 +550,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -270,7 +606,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.ctx =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -302,7 +662,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.world =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -334,7 +726,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.camera =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -366,7 +790,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // ----------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -382,7 +838,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         // ----------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -422,7 +902,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // ----------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -438,7 +950,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         // ----------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -455,6 +991,22 @@ export class Renderer {
  
 
         this.selection = null;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -494,7 +1046,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // ----------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -510,6 +1094,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         // ----------------------------------------------------
 
  
@@ -526,200 +1118,12 @@ export class Renderer {
 
  
 
-        this.colors = {
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            plain:
-
- 
-
- 
-
- 
-
-                "#b4b28f",
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            forest:
-
- 
-
- 
-
- 
-
-                "#65705a",
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            marsh:
-
- 
-
- 
-
- 
-
-                "#87917b",
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            urban:
-
- 
-
- 
-
- 
-
-                "#aaa184",
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            water:
-
- 
-
- 
-
- 
-
-                "#7693a1",
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            grid:
-
- 
-
- 
-
- 
-
-                "#747660",
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            road:
-
- 
-
- 
-
- 
-
-                "#a38e69",
-
- 
-
- 
-
- 
-
- 
-
- 
-
  
 
  
 
-            railway:
-
- 
-
- 
-
  
 
-                "#57564c",
-
  
 
  
@@ -730,20 +1134,18 @@ export class Renderer {
 
  
 
- 
+        this.mapTheme =
 
- 
+            MAP_THEMES[ACTIVE_MAP_THEME] ??
 
-            river:
+            MAP_THEMES.easternFront1941;
 
  
 
- 
+        this.colors = this.mapTheme;
 
  
 
-                "#668ba0"
-
  
 
  
@@ -757,8 +1159,6 @@ export class Renderer {
  
 
  
-
-        };
 
  
 
@@ -798,7 +1198,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -814,7 +1246,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -846,6 +1302,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const ctx =
 
  
@@ -854,7 +1326,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.ctx;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -902,6 +1406,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         ctx.setTransform(
 
  
@@ -910,23 +1438,7 @@ export class Renderer {
 
  
 
-            1,
-
  
-
- 
-
- 
-
-            0,
-
- 
-
- 
-
- 
-
-            0,
 
  
 
@@ -942,7 +1454,71 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             0,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+            0,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+            1,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+            0,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -958,7 +1534,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -990,6 +1598,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             0,
 
  
@@ -998,7 +1614,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             0,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1014,6 +1646,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.canvas.height
 
  
@@ -1022,7 +1662,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1054,7 +1726,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             "#8f9078";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1086,6 +1790,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             0,
 
  
@@ -1094,7 +1806,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             0,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1110,6 +1838,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.canvas.height
 
  
@@ -1118,7 +1854,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1158,6 +1926,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
 
  
@@ -1182,7 +1966,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1198,7 +2014,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1222,6 +2062,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         q,
 
  
@@ -1230,7 +2078,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         r
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1254,7 +2118,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const size =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1286,7 +2174,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         return {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1310,7 +2238,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 size *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1326,7 +2270,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1342,7 +2302,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     r / 2
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1366,7 +2342,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             y:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1382,7 +2382,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 1.5 *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1406,7 +2422,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         };
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1446,7 +2494,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1462,7 +2542,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1486,7 +2590,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         x,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1502,7 +2622,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1534,7 +2678,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             x:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1550,7 +2718,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 this.camera.zoom +
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1574,7 +2758,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             y:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1590,7 +2798,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 this.camera.zoom +
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1614,7 +2838,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         };
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1654,7 +2910,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1670,7 +2958,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1694,6 +3006,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         q,
 
  
@@ -1702,7 +3022,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         r
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1726,7 +3062,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const world =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1742,6 +3102,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 q,
 
  
@@ -1750,7 +3118,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 r
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1782,7 +3166,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         return this.worldPointToScreen(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1798,6 +3214,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             world.y
 
  
@@ -1806,7 +3230,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1846,7 +3294,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1862,7 +3342,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1886,7 +3390,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         terrain
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1910,7 +3430,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         return (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1926,6 +3470,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.colors.plain
 
  
@@ -1934,7 +3486,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1974,7 +3550,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -1990,7 +3598,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2022,7 +3654,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const ctx =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2054,6 +3710,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const size =
 
  
@@ -2062,7 +3742,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.hexSize *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2094,7 +3790,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2110,6 +3838,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             r < this.world.height;
 
  
@@ -2118,7 +3854,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             r++
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2142,7 +3894,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2158,6 +3934,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 q < this.world.width;
 
  
@@ -2166,7 +3950,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 q++
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2190,7 +3990,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 const p =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2206,7 +4030,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         q,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2222,7 +4062,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2254,7 +4126,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     this.world.terrainAt(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2270,6 +4158,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         r
 
  
@@ -2278,7 +4174,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2310,7 +4238,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     ctx,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2326,6 +4270,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     p.y,
 
  
@@ -2334,7 +4286,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     size
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2366,7 +4334,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.fillStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2382,6 +4382,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         terrain
 
  
@@ -2390,7 +4398,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2438,7 +4478,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.strokeStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2470,7 +4542,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.lineWidth =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2486,7 +4590,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         0.6,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2502,7 +4622,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2542,6 +4694,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
 
  
@@ -2558,7 +4726,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2598,7 +4798,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2614,7 +4846,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2638,7 +4894,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         ...names
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2662,7 +4934,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2678,7 +4974,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             of names
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2702,7 +5014,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             if (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2718,7 +5054,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     this.world[name]
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2734,7 +5086,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2766,6 +5142,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
 
  
@@ -2782,7 +5174,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2822,6 +5254,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
 
  
@@ -2846,7 +5294,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2862,7 +5342,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2886,7 +5390,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         point
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2910,6 +5430,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         if (!point) {
 
  
@@ -2918,7 +5454,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             return null;
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2950,6 +5502,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         if (
 
  
@@ -2958,7 +5534,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             Array.isArray(point)
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -2982,7 +5574,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             return {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3014,7 +5638,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 r: Number(point[1])
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3046,7 +5702,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3078,7 +5774,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             point.q !== undefined &&
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3094,7 +5806,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3126,7 +5862,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 q: Number(point.q),
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3158,6 +5926,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             };
 
  
@@ -3174,7 +5958,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3214,6 +6038,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
 
  
@@ -3238,7 +6078,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3254,7 +6126,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3278,6 +6174,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         features,
 
  
@@ -3286,7 +6190,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         options = {}
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3310,7 +6230,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const ctx =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3342,6 +6286,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const color =
 
  
@@ -3350,7 +6318,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             options.color ??
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3382,6 +6366,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const width =
 
  
@@ -3390,7 +6398,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             options.width ??
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3422,7 +6446,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const dashed =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3438,7 +6494,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             false;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3486,7 +6574,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         ctx.strokeStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3518,6 +6638,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         ctx.lineWidth =
 
  
@@ -3526,7 +6670,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             width *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3558,6 +6718,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         ctx.lineCap =
 
  
@@ -3566,7 +6750,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             "round";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3598,7 +6814,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             "round";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3638,7 +6886,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.setLineDash([
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3654,6 +6926,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 5 * this.camera.zoom
 
  
@@ -3662,7 +6942,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ]);
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3702,7 +7006,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3718,7 +7054,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             of features
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3742,7 +7094,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const points =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3758,6 +7134,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 feature.path ??
 
  
@@ -3766,7 +7150,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 feature.hexes ??
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3798,7 +7198,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             if (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3814,6 +7246,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 points.length < 2
 
  
@@ -3822,7 +7262,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3854,7 +7318,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3902,7 +7406,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             let started =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3934,7 +7470,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3950,7 +7518,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 of points
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3974,7 +7558,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 const hex =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -3990,6 +7598,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         rawPoint
 
  
@@ -3998,7 +7614,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4030,7 +7678,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     continue;
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4062,7 +7726,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 const p =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4078,7 +7774,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         hex.q,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4094,7 +7806,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4134,7 +7878,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     ctx.moveTo(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4150,6 +7918,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         p.y
 
  
@@ -4158,7 +7934,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4190,6 +7998,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         true;
 
  
@@ -4206,7 +8022,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4238,7 +8086,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     ctx.lineTo(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4254,6 +8126,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         p.y
 
  
@@ -4262,7 +8142,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4294,7 +8198,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4334,6 +8278,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.stroke();
 
  
@@ -4350,7 +8310,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4390,7 +8382,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         ctx.restore();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4430,7 +8462,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4446,7 +8510,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4478,7 +8566,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const rivers =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4494,6 +8606,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "rivers",
 
  
@@ -4502,7 +8622,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "riverFeatures"
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4534,7 +8670,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.drawFeatureLines(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4550,6 +8718,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             {
 
  
@@ -4558,7 +8734,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 color:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4582,7 +8774,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 width:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4598,6 +8814,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             }
 
  
@@ -4606,7 +8830,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4646,7 +8894,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4662,7 +8942,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4694,7 +8998,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const roads =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4710,6 +9038,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "roads",
 
  
@@ -4718,7 +9054,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "roadFeatures"
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4750,7 +9102,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.drawFeatureLines(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4766,6 +9150,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             {
 
  
@@ -4774,7 +9166,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 color:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4798,7 +9206,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 width:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4814,6 +9246,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             }
 
  
@@ -4822,7 +9262,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4862,7 +9326,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4878,7 +9374,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4910,7 +9430,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const railways =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4926,7 +9470,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "railways",
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4942,7 +9502,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "railwayFeatures"
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4974,7 +9550,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.drawFeatureLines(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -4990,6 +9598,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             {
 
  
@@ -4998,7 +9614,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 color:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5022,7 +9654,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 width:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5046,7 +9702,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 dashed:
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5062,6 +9742,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             }
 
  
@@ -5070,7 +9758,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5110,7 +9822,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5126,7 +9870,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5158,7 +9926,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const settlements =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5174,7 +9966,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "settlements",
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5190,7 +9998,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "towns"
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5222,6 +10046,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const ctx =
 
  
@@ -5230,7 +10078,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.ctx;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5278,7 +10158,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5294,7 +10206,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             of settlements
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5318,7 +10246,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const q =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5350,7 +10302,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const r =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5382,7 +10366,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             if (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5398,7 +10414,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 r === undefined
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5422,7 +10454,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 continue;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5462,7 +10526,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const p =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5478,7 +10574,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     q,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5494,7 +10606,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5526,7 +10670,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 Math.max(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5542,7 +10702,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     4 *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5558,7 +10734,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5606,7 +10814,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.arc(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5622,7 +10862,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 p.y,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5638,6 +10894,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 0,
 
  
@@ -5646,7 +10910,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 Math.PI * 2
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5678,6 +10958,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillStyle =
 
  
@@ -5686,7 +10990,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "#34352e";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5734,7 +11070,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.font =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5750,7 +11118,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     Math.max(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5766,7 +11150,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         13 *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5782,7 +11182,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     )
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5814,7 +11230,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5846,7 +11294,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.textAlign =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5878,7 +11358,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.textBaseline =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5910,7 +11422,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillText(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5926,7 +11470,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "",
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5942,7 +11502,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 radius +
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5958,7 +11534,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 p.y
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -5982,7 +11574,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6022,6 +11654,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
 
  
@@ -6046,7 +11694,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6062,7 +11742,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6094,7 +11798,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         if (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6110,7 +11838,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             !this.movementSystem.selectedUnit
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6134,7 +11878,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             return;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6174,7 +11950,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const ctx =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6206,7 +12014,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const size =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6222,7 +12062,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.camera.zoom;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6270,7 +12142,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         for (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6286,7 +12190,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 key,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6302,7 +12222,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ]
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6318,6 +12254,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 .reachable
 
  
@@ -6326,7 +12270,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 .entries()
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6350,7 +12310,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const [
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6366,7 +12350,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 r
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6382,6 +12382,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 key
 
  
@@ -6390,7 +12398,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     .split(",")
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6422,7 +12446,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const p =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6438,6 +12494,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     q,
 
  
@@ -6446,7 +12510,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     r
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6478,7 +12558,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             drawHexPath(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6494,7 +12606,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 p.x,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6510,7 +12638,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 size * 0.92
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6542,6 +12686,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillStyle =
 
  
@@ -6550,7 +12718,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "rgba(96, 137, 91, 0.32)";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6598,7 +12798,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.strokeStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6630,7 +12862,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.lineWidth =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6646,7 +12910,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     1,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6662,7 +12942,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     this.camera.zoom
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6694,7 +12990,55 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.stroke();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6734,6 +13078,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             if (
 
  
@@ -6742,7 +13102,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 this.camera.zoom >= 1.15
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6766,7 +13142,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.fillStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6798,7 +13198,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.font =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6814,7 +13246,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         Math.max(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6830,7 +13278,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                             9 *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6846,7 +13310,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         )
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6878,7 +13358,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.textAlign =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6910,7 +13422,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.textBaseline =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6942,7 +13486,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.fillText(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6958,7 +13534,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     p.x,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -6974,7 +13566,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7006,7 +13622,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7046,6 +13702,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
 
  
@@ -7070,7 +13742,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7086,7 +13790,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7110,7 +13838,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         faction
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7134,7 +13878,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         if (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7150,7 +13918,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             faction === "germany" ||
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7166,7 +13950,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             faction === "GERMAN" ||
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7182,7 +13982,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7214,7 +14038,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7246,7 +14110,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             faction === "USSR" ||
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7262,6 +14142,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             faction === "Soviet"
 
  
@@ -7270,7 +14158,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7302,7 +14214,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7342,6 +14294,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
 
  
@@ -7366,7 +14334,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7382,7 +14382,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -7400,137 +14424,25 @@ export class Renderer {
 
     drawMilitarySymbol(
 
- 
-
- 
-
- 
-
         unit,
-
- 
-
- 
-
- 
 
         x,
 
- 
-
- 
-
- 
-
         y,
-
- 
-
- 
-
- 
 
         width,
 
- 
-
- 
-
- 
-
         height
-
- 
-
- 
-
- 
 
     ) {
 
- 
+        const ctx = this.ctx;
 
- 
+        const type = String(unit.type ?? "infantry").toLowerCase();
 
- 
+        const hqLevel = String(unit.hqLevel ?? "").toLowerCase();
 
- 
-
- 
-
- 
-
- 
-
-        const ctx =
-
- 
-
- 
-
- 
-
-            this.ctx;
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-        const type =
-
- 
-
- 
-
- 
-
-            unit.type ??
-
- 
-
- 
-
- 
-
-            "infantry";
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
+        const hqRole = String(unit.hqRole ?? "").toLowerCase();
 
  
 
@@ -7538,359 +14450,179 @@ export class Renderer {
 
  
 
- 
+        ctx.strokeStyle = "#171916";
+
+        ctx.fillStyle = "#171916";
+
+        ctx.lineWidth = Math.max(
+
+            1.2,
+
+            1.6 * this.camera.zoom
+
+        );
+
+        ctx.lineCap = "round";
+
+        ctx.lineJoin = "round";
 
  
 
- 
+        // ----------------------------------------------------
+
+        // 指挥机构本部
+
+        // 只把 hqRole === "command" 当作真正的军/师/团本部。
+
+        // 警卫营、警卫连虽然 isHQ=true，但仍按战斗单位绘制。
+
+        // ----------------------------------------------------
+
+        const isCommand =
+
+            type === "headquarters" ||
+
+            hqRole === "command";
 
  
 
- 
+        if (isCommand) {
 
- 
+            this.drawCommandSymbol(
 
- 
+                unit,
 
- 
+                x,
 
- 
+                y,
 
- 
+                width,
 
-        ctx.strokeStyle =
-
- 
-
- 
-
- 
-
-            "#171916";
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-        ctx.fillStyle =
-
- 
-
- 
-
- 
-
-            "#171916";
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-        ctx.lineWidth =
-
- 
-
- 
-
- 
-
-            Math.max(
-
- 
-
- 
-
- 
-
-                1.5,
-
- 
-
- 
-
- 
-
-                2 *
-
- 
-
- 
-
- 
-
-                this.camera.zoom
-
- 
-
- 
-
- 
+                height
 
             );
 
- 
+            ctx.restore();
+
+            return;
+
+        }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 步兵 / 警卫步兵
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
+        // ----------------------------------------------------
 
         if (
 
- 
+            type === "infantry" ||
 
- 
+            type === "guard" ||
 
- 
-
-            type === "infantry"
-
- 
-
- 
-
- 
+            type === "guards"
 
         ) {
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.beginPath();
 
  
 
- 
+            ctx.moveTo(
 
- 
+                x - width * 0.31,
 
- 
+                y - height * 0.27
 
- 
+            );
 
- 
+            ctx.lineTo(
+
+                x + width * 0.31,
+
+                y + height * 0.27
+
+            );
 
  
 
             ctx.moveTo(
 
- 
-
- 
-
- 
-
-                x - width * 0.32,
-
- 
-
- 
-
- 
+                x + width * 0.31,
 
                 y - height * 0.27
 
- 
-
- 
-
- 
-
             );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.lineTo(
 
- 
-
- 
-
- 
-
-                x + width * 0.32,
-
- 
-
- 
-
- 
+                x - width * 0.31,
 
                 y + height * 0.27
-
- 
-
- 
-
- 
 
             );
 
  
 
- 
+            ctx.stroke();
+
+        }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 摩托化步兵：步兵 X + 中央小轮
 
- 
+        // ----------------------------------------------------
+
+        else if (
+
+            type === "motorized" ||
+
+            type === "motorized_infantry"
+
+        ) {
+
+            ctx.beginPath();
 
  
 
             ctx.moveTo(
 
- 
-
- 
-
- 
-
-                x + width * 0.32,
-
- 
-
- 
-
- 
+                x - width * 0.31,
 
                 y - height * 0.27
 
- 
-
- 
-
- 
-
             );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.lineTo(
 
- 
-
- 
-
- 
-
-                x - width * 0.32,
-
- 
-
- 
-
- 
+                x + width * 0.31,
 
                 y + height * 0.27
-
- 
-
- 
-
- 
 
             );
 
  
 
- 
+            ctx.moveTo(
 
- 
+                x + width * 0.31,
 
- 
+                y - height * 0.27
 
- 
+            );
 
- 
+            ctx.lineTo(
+
+                x - width * 0.31,
+
+                y + height * 0.27
+
+            );
 
  
 
@@ -7898,953 +14630,543 @@ export class Renderer {
 
  
 
- 
+            ctx.beginPath();
 
- 
+            ctx.arc(
 
- 
+                x,
 
- 
+                y,
 
- 
+                height * 0.10,
 
- 
+                0,
+
+                Math.PI * 2
+
+            );
+
+            ctx.stroke();
 
         }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 装甲 / 坦克
 
- 
-
- 
-
- 
-
- 
+        // ----------------------------------------------------
 
         else if (
 
- 
+            type === "armor" ||
 
- 
-
- 
-
-            type === "armor"
-
- 
-
- 
-
- 
+            type === "tank"
 
         ) {
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.beginPath();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.ellipse(
 
- 
-
- 
-
- 
-
                 x,
 
- 
-
- 
-
- 
-
                 y,
-
- 
-
- 
-
- 
 
                 width * 0.27,
 
- 
-
- 
-
- 
-
-                height * 0.18,
-
- 
-
- 
-
- 
+                height * 0.19,
 
                 0,
 
- 
-
- 
-
- 
-
                 0,
-
- 
-
- 
-
- 
 
                 Math.PI * 2
 
- 
-
- 
-
- 
-
             );
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.stroke();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
         }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 炮兵
 
- 
+        // ----------------------------------------------------
 
- 
-
- 
-
- 
-
-        else if (
-
- 
-
- 
-
- 
-
-            type === "artillery"
-
- 
-
- 
-
- 
-
-        ) {
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
+        else if (type === "artillery") {
 
             ctx.beginPath();
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.arc(
-
- 
-
- 
-
- 
 
                 x,
 
- 
-
- 
-
- 
-
                 y,
-
- 
-
- 
-
- 
 
                 height * 0.13,
 
- 
-
- 
-
- 
-
                 0,
-
- 
-
- 
-
- 
 
                 Math.PI * 2
 
- 
-
- 
-
- 
-
             );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.fill();
 
  
 
- 
+            ctx.beginPath();
 
- 
+            ctx.moveTo(
 
- 
+                x,
 
- 
+                y - height * 0.28
 
- 
+            );
 
- 
+            ctx.lineTo(
+
+                x,
+
+                y + height * 0.28
+
+            );
+
+            ctx.stroke();
 
         }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 反坦克
 
- 
-
- 
-
- 
-
- 
+        // ----------------------------------------------------
 
         else if (
 
- 
+            type === "antitank" ||
 
- 
-
- 
-
-            type === "antitank"
-
- 
-
- 
-
- 
+            type === "anti_tank"
 
         ) {
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.beginPath();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.moveTo(
 
- 
-
- 
-
- 
-
                 x - width * 0.28,
-
- 
-
- 
-
- 
 
                 y
 
- 
-
- 
-
- 
-
             );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.lineTo(
 
- 
-
- 
-
- 
-
                 x + width * 0.28,
-
- 
-
- 
-
- 
 
                 y
 
- 
-
- 
-
- 
-
             );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.stroke();
 
  
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.beginPath();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.arc(
 
- 
-
- 
-
- 
-
                 x,
 
- 
-
- 
-
- 
-
                 y,
-
- 
-
- 
-
- 
 
                 height * 0.12,
 
- 
-
- 
-
- 
-
                 0,
-
- 
-
- 
-
- 
 
                 Math.PI * 2
 
- 
-
- 
-
- 
-
             );
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.stroke();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
         }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 侦察
 
- 
-
- 
-
- 
-
- 
+        // ----------------------------------------------------
 
         else if (
 
- 
+            type === "reconnaissance" ||
 
- 
-
- 
-
-            type === "reconnaissance"
-
- 
-
- 
-
- 
+            type === "recon"
 
         ) {
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.beginPath();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.moveTo(
 
- 
-
- 
-
- 
-
                 x - width * 0.28,
-
- 
-
- 
-
- 
 
                 y + height * 0.20
 
- 
-
- 
-
- 
-
             );
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.lineTo(
-
- 
-
- 
-
- 
 
                 x,
 
- 
-
- 
-
- 
-
-                y - height * 0.22
-
- 
-
- 
-
- 
+                y - height * 0.23
 
             );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
             ctx.lineTo(
 
- 
-
- 
-
- 
-
                 x + width * 0.28,
-
- 
-
- 
-
- 
 
                 y + height * 0.20
 
- 
-
- 
-
- 
-
             );
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
             ctx.stroke();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
 
         }
 
  
 
- 
+        // ----------------------------------------------------
 
- 
+        // 工兵
 
- 
+        // ----------------------------------------------------
 
- 
+        else if (
 
- 
+            type === "engineer" ||
 
- 
+            type === "engineering"
 
-        else {
+        ) {
 
- 
+            const left = x - width * 0.23;
 
- 
+            const right = x + width * 0.23;
 
- 
+            const top = y - height * 0.20;
 
- 
-
- 
-
- 
+            const bottom = y + height * 0.22;
 
  
 
             ctx.beginPath();
 
- 
+            ctx.moveTo(left, bottom);
 
- 
+            ctx.lineTo(left, top);
 
- 
+            ctx.lineTo(right, top);
 
- 
+            ctx.lineTo(right, bottom);
 
- 
-
- 
-
- 
-
-            ctx.arc(
-
- 
-
- 
-
- 
-
-                x,
-
- 
-
- 
-
- 
-
-                y,
-
- 
-
- 
-
- 
-
-                height * 0.11,
-
- 
-
- 
-
- 
-
-                0,
-
- 
-
- 
-
- 
-
-                Math.PI * 2
-
- 
-
- 
-
- 
-
-            );
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-            ctx.fill();
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
+            ctx.stroke();
 
         }
 
  
 
- 
+        // ----------------------------------------------------
+
+        // 未识别单位
+
+        // ----------------------------------------------------
+
+        else {
+
+            ctx.beginPath();
+
+            ctx.arc(
+
+                x,
+
+                y,
+
+                height * 0.10,
+
+                0,
+
+                Math.PI * 2
+
+            );
+
+            ctx.fill();
+
+        }
 
  
 
- 
+        // ----------------------------------------------------
+
+        // HQ 警卫单位角标
+
+        // 警卫单位仍保留自身兵种符号，只在右上角加小 H。
+
+        // ----------------------------------------------------
+
+        if (
+
+            unit.isHQ === true &&
+
+            hqRole === "guard"
+
+        ) {
+
+            ctx.font =
+
+                `bold ${Math.max(
+
+                    6,
+
+                    6.5 * this.camera.zoom
+
+                )}px Consolas, monospace`;
 
  
 
- 
+            ctx.textAlign = "right";
+
+            ctx.textBaseline = "top";
+
+            ctx.fillStyle = "#171916";
 
  
 
- 
+            ctx.fillText(
 
- 
+                "H",
 
- 
+                x + width * 0.42,
+
+                y - height * 0.42
+
+            );
+
+        }
 
  
 
         ctx.restore();
 
- 
+    }
 
  
 
- 
+    // ========================================================
+
+    // 军 / 师 / 团指挥机构
+
+    //
+
+    // 军：三颗星
+
+    // 师：两颗星
+
+    // 团：一颗星
+
+    // 三者均带小型指挥旗，因此不会再出现军级与团级相同。
+
+    // ========================================================
 
  
 
- 
+    drawCommandSymbol(
+
+        unit,
+
+        x,
+
+        y,
+
+        width,
+
+        height
+
+    ) {
+
+        const ctx = this.ctx;
+
+        const level =
+
+            String(unit.hqLevel ?? "").toLowerCase();
 
  
 
+        let stars = "★";
+
  
+
+        if (
+
+            level === "corps" ||
+
+            level === "army"
+
+        ) {
+
+            stars = "★★★";
+
+        }
+
+        else if (level === "division") {
+
+            stars = "★★";
+
+        }
+
+        else if (level === "regiment") {
+
+            stars = "★";
+
+        }
+
+ 
+
+        // 指挥旗杆
+
+        const poleX =
+
+            x - width * 0.28;
+
+ 
+
+        const poleTop =
+
+            y - height * 0.31;
+
+ 
+
+        const poleBottom =
+
+            y + height * 0.28;
+
+ 
+
+        ctx.beginPath();
+
+        ctx.moveTo(
+
+            poleX,
+
+            poleBottom
+
+        );
+
+        ctx.lineTo(
+
+            poleX,
+
+            poleTop
+
+        );
+
+        ctx.stroke();
+
+ 
+
+        // 小三角旗
+
+        ctx.beginPath();
+
+        ctx.moveTo(
+
+            poleX,
+
+            poleTop
+
+        );
+
+        ctx.lineTo(
+
+            poleX + width * 0.22,
+
+            poleTop + height * 0.09
+
+        );
+
+        ctx.lineTo(
+
+            poleX,
+
+            poleTop + height * 0.18
+
+        );
+
+        ctx.closePath();
+
+        ctx.stroke();
+
+ 
+
+        // 等级星
+
+        ctx.fillStyle = "#171916";
+
+        ctx.textAlign = "center";
+
+        ctx.textBaseline = "middle";
+
+ 
+
+        const fontSize =
+
+            stars.length >= 3
+
+                ? Math.max(
+
+                    7,
+
+                    height * 0.31
+
+                )
+
+                : Math.max(
+
+                    8,
+
+                    height * 0.35
+
+                );
+
+ 
+
+        ctx.font =
+
+            `bold ${fontSize}px serif`;
+
+ 
+
+        ctx.fillText(
+
+            stars,
+
+            x + width * 0.10,
+
+            y
+
+        );
 
     }
 
@@ -8870,7 +15192,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -8886,7 +15240,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -8910,7 +15288,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         units = []
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -8934,6 +15328,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         const ctx =
 
  
@@ -8942,7 +15352,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             this.ctx;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -8974,7 +15416,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             const unit
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -8990,6 +15448,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         ) {
 
  
@@ -8998,7 +15464,19 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
 
  
 
@@ -9006,11 +15484,27 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
             // 但绝不继续绘制在地图上。
 
  
 
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9020,43 +15514,83 @@ export class Renderer {
 
             const strengthForRender =
 
+ 
+
                 Number(unit?.strength);
+
+ 
+
+ 
 
  
 
             const manpowerForRender =
 
+ 
+
                 Number(unit?.manpower);
+
+ 
+
+ 
 
  
 
             const strengthDead =
 
+ 
+
                 Number.isFinite(strengthForRender) &&
+
+ 
 
                 strengthForRender <= 0;
 
  
 
+ 
+
+ 
+
             const manpowerDead =
 
+ 
+
                 Number.isFinite(manpowerForRender) &&
+
+ 
 
                 manpowerForRender <= 0;
 
  
 
+ 
+
+ 
+
             if (
+
+ 
 
                 unit?.destroyed === true ||
 
+ 
+
                 strengthDead ||
+
+ 
 
                 manpowerDead
 
+ 
+
             ) {
 
+ 
+
                 continue;
+
+ 
 
             }
 
@@ -9078,7 +15612,35 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             if (
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9094,6 +15656,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 unit.r === undefined
 
  
@@ -9102,7 +15672,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9134,7 +15728,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9166,7 +15800,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 this.worldToScreen(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9182,7 +15832,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     unit.r
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9214,23 +15880,59 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             const width =
 
- 
-
- 
-
- 
-
-                42 *
-
- 
-
- 
-
- 
+                34 *
 
                 this.camera.zoom;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9256,21 +15958,33 @@ export class Renderer {
 
             const height =
 
- 
-
- 
-
- 
-
-                30 *
-
- 
-
- 
-
- 
+                24 *
 
                 this.camera.zoom;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9302,6 +16016,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 this.selection &&
 
  
@@ -9310,7 +16032,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 this.selection.selectedUnit ===
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9342,7 +16080,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9358,7 +16128,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9375,6 +16169,22 @@ export class Renderer {
  
 
             if (selected) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9414,7 +16224,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.strokeStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9446,7 +16288,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.lineWidth =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9462,7 +16336,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         2,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9478,6 +16368,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         this.camera.zoom
 
  
@@ -9486,7 +16384,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9526,7 +16456,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     p.x -
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9542,7 +16496,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     5,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9566,7 +16544,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     height / 2 -
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9590,7 +16584,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     width +
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9614,7 +16632,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     height +
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9638,7 +16680,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9678,6 +16760,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             }
 
  
@@ -9702,7 +16800,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9718,7 +16848,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9758,7 +16912,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillStyle =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9774,6 +16960,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     unit.faction
 
  
@@ -9782,7 +16976,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9814,7 +17040,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "#1c1e1b";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9846,7 +17104,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 Math.max(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9862,7 +17136,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     2 *
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9878,7 +17168,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9918,7 +17240,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 p.x -
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9942,6 +17288,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 p.y -
 
  
@@ -9950,7 +17312,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 height / 2,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -9982,6 +17368,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 height
 
  
@@ -9998,7 +17400,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10038,7 +17480,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 p.x -
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10062,6 +17528,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 p.y -
 
  
@@ -10070,7 +17552,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 height / 2,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10102,6 +17608,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 height
 
  
@@ -10118,7 +17640,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10166,7 +17728,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10182,7 +17776,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10214,7 +17832,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 unit,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10246,7 +17896,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 p.y,
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10278,7 +17960,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 height
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10318,7 +18032,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10334,7 +18080,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10358,7 +18128,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 unit.regiment ??
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10374,6 +18160,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 unit.parentUnit ??
 
  
@@ -10382,7 +18176,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10422,7 +18248,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.save();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10454,7 +18320,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     "#4b493f";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10486,7 +18384,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     `${
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10502,7 +18416,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                             7,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10518,6 +18448,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                             this.camera.zoom
 
  
@@ -10526,7 +18464,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         )
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10558,6 +18512,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.textAlign =
 
  
@@ -10566,7 +18544,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     "center";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10606,7 +18616,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     String(regiment),
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10638,7 +18680,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                     p.y -
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10654,7 +18720,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     4
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10694,7 +18784,47 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 ctx.restore();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10734,7 +18864,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10750,7 +18912,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10768,31 +18954,73 @@ export class Renderer {
 
             const currentStrength = Math.max(
 
+ 
+
                 0,
 
+ 
+
                 Number(unit.strength ?? unit.manpower ?? 0)
+
+ 
 
             );
 
  
 
+ 
+
+ 
+
             const maximumStrength = Math.max(
+
+ 
 
                 1,
 
+ 
+
                 Number(
+
+ 
 
                     unit.maxStrength ??
 
+ 
+
                     unit.initialStrength ??
+
+ 
 
                     unit.maxManpower ??
 
+ 
+
                     currentStrength
+
+ 
 
                 )
 
+ 
+
             );
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10816,7 +19044,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillStyle = "#20231f";
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10832,7 +19076,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.textAlign = "center";
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10848,7 +19108,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.fillText(
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10864,7 +19140,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 p.x,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10880,7 +19172,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             );
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10904,7 +19212,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10920,7 +19252,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             // ------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10937,6 +19293,30 @@ export class Renderer {
  
 
             ctx.save();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -10968,7 +19348,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "#34352f";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11000,7 +19412,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 `${
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11016,7 +19444,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         8,
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11032,6 +19476,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                         this.camera.zoom
 
  
@@ -11040,7 +19492,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                     )
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11072,7 +19540,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.textAlign =
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11104,6 +19604,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.textBaseline =
 
  
@@ -11112,7 +19636,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "top";
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11152,6 +19708,22 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 unit.name ??
 
  
@@ -11160,7 +19732,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 "",
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11192,7 +19788,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
                 p.y +
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11208,7 +19828,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
                 4
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11248,6 +19892,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
             ctx.restore();
 
  
@@ -11264,7 +19932,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11304,7 +20004,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11320,7 +20052,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     // ========================================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11344,6 +20100,14 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         units = []
 
  
@@ -11352,7 +20116,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
     ) {
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11392,7 +20180,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // 地形
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11424,6 +20244,30 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // 地理要素
 
  
@@ -11432,7 +20276,31 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
         this.drawRoads();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11464,7 +20332,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         this.drawRivers();
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11504,7 +20404,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // 移动范围必须位于单位下面
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11536,7 +20468,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
         // 单位
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11552,7 +20516,23 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
             units
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
@@ -11576,7 +20556,39 @@ export class Renderer {
 
  
 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
     }
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
