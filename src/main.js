@@ -2669,4 +2669,3 @@ window.addEventListener(
 // ============================================================
 resizeCanvas();
 loadScenario();
-
