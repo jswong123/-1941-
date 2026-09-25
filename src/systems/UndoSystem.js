@@ -1,53 +1,117 @@
 // ============================================================
+
 // UndoSystem.js
-// 东线 1941 — 玩家行动撤销系统 V1.0
+
+// 东线 1941 V1.4
+
+// 玩家行动撤销系统
+
 // ============================================================
+
 export class UndoSystem {
+
     constructor({ maxHistory = 30 } = {}) {
+
         this.maxHistory = maxHistory;
-        this.stack = [];
+
+        this.history = [];
+
     }
+
+ 
 
     clone(value) {
+
         return JSON.parse(JSON.stringify(value));
+
     }
 
-    capture({ units, turnSystem, gameOver = false }) {
-        const state = turnSystem?.getState?.() ?? {};
+ 
+
+    createSnapshot({ units, turnSystem, gameOver }) {
+
         return {
+
             units: this.clone(units ?? []),
-            turn: this.clone({
-                ...state,
-                turn: state.turn ?? turnSystem?.turn ?? 1,
-                phase: state.phase ?? turnSystem?.phase ?? "german",
-                year: state.year ?? turnSystem?.year ?? 1941,
-                month: state.month ?? turnSystem?.month ?? 6,
-                day: state.day ?? turnSystem?.day ?? 26,
-                hour: state.hour ?? turnSystem?.hour ?? 8,
-                minute: state.minute ?? turnSystem?.minute ?? 0
-            }),
-            gameOver
+
+            gameOver: gameOver === true,
+
+            turn: {
+
+                turn: turnSystem?.turn ?? turnSystem?.getTurnNumber?.() ?? 1,
+
+                phase: turnSystem?.phase ?? "german",
+
+                year: turnSystem?.year ?? 1941,
+
+                month: turnSystem?.month ?? 6,
+
+                day: turnSystem?.day ?? 26,
+
+                hour: turnSystem?.hour ?? 8,
+
+                minute: turnSystem?.minute ?? 0
+
+            }
+
         };
+
     }
+
+ 
 
     push(state, label = "玩家行动") {
-        this.stack.push({ label, snapshot: this.capture(state) });
-        if (this.stack.length > this.maxHistory) this.stack.shift();
+
+        this.history.push({
+
+            label,
+
+            createdAt: Date.now(),
+
+            snapshot: this.createSnapshot(state)
+
+        });
+
+ 
+
+        while (this.history.length > this.maxHistory) {
+
+            this.history.shift();
+
+        }
+
     }
 
-    canUndo() {
-        return this.stack.length > 0;
-    }
-
-    undo() {
-        return this.stack.pop() ?? null;
-    }
+ 
 
     discardLast() {
-        if (this.stack.length > 0) this.stack.pop();
+
+        return this.history.pop() ?? null;
+
     }
 
-    clear() {
-        this.stack.length = 0;
+ 
+
+    undo() {
+
+        return this.history.pop() ?? null;
+
     }
+
+ 
+
+    canUndo() {
+
+        return this.history.length > 0;
+
+    }
+
+ 
+
+    clear() {
+
+        this.history.length = 0;
+
+    }
+
 }
